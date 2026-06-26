@@ -41,7 +41,7 @@ export async function POST(request: Request) {
     // import { Resend } from "resend";
     // const resend = new Resend(process.env.RESEND_API_KEY);
     // await resend.emails.send({
-    //   from: "TU MARCA <hola@tudominio.com>",
+    //   from: "Pau Solutions <hola@tudominio.com>",
     //   to: process.env.CONTACT_TO ?? "hola@tudominio.com",
     //   subject: isFullForm
     //     ? `Nuevo contacto — ${(data as any).company}`

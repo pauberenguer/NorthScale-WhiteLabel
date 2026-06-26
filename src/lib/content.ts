@@ -1,5 +1,5 @@
 export const site = {
-  name: "TU MARCA",
+  name: "Pau Solutions",
   // Entidad legal que aparece en las páginas de privacidad y términos.
   legalEntity: "TU ENTIDAD LEGAL S.L.",
   domain: "tudominio.com",
