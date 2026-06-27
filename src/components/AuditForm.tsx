@@ -121,10 +121,22 @@ export function AuditForm({ className, darkMode }: { className?: string; darkMod
         phone: `${country.dial} ${data.phone}`.trim(),
         phoneCountry: country.iso,
       };
+      const body = JSON.stringify(payload);
+
+      // Dispara la automatización de nutrición en paralelo (fire-and-forget):
+      // si falla, no debe romper el envío principal del formulario.
+      if (site.nurtureWebhookUrl && site.nurtureWebhookUrl !== "PEGA_AQUI_TU_WEBHOOK_DE_NUTRICION") {
+        fetch(site.nurtureWebhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body,
+        }).catch(() => {});
+      }
+
       const res = await fetch(site.webhookUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body,
       });
       if (!res.ok) throw new Error("Error en el envío");
       setStatus("success");

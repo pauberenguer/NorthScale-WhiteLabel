@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<title>Cómo empezamos</title>
+<!--[if mso]>
+<noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+<style>
+  table, td, p, a, h1, h2 { font-family: Arial, Helvetica, sans-serif !important; }
+</style>
+<![endif]-->
+<style>
+  /* ============================================
+     RESET
+     ============================================ */
+  body, table, td, p, a, li { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+  table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+  body { margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+  /* ============================================
+     PALETA — Minimalista (blanco, negro, gris)
+     ============================================ */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+    line-height: 1.65;
+  }
+  .preheader {
+    display: none !important;
+    visibility: hidden;
+    mso-hide: all;
+    font-size: 1px;
+    line-height: 1px;
+    max-height: 0;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    color: #f5f5f5;
+  }
+
+  .email-wrapper { width: 100%; background-color: #f5f5f5; padding: 40px 16px; }
+  .email-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  /* ============================================
+     HEADER
+     ============================================ */
+  .header {
+    background-color: #ffffff;
+    padding: 40px 36px 32px 36px;
+    text-align: left;
+    border-bottom: 1px solid #ebebeb;
+  }
+  .header-brand {
+    color: #999999;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+  }
+  .header-title {
+    color: #1a1a1a;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .header-subtitle {
+    color: #777777;
+    font-size: 16px;
+    line-height: 1.55;
+    margin: 12px 0 0 0;
+    font-weight: 400;
+  }
+
+  /* ============================================
+     BODY
+     ============================================ */
+  .body-content { padding: 36px 36px 8px 36px; }
+  .body-content p {
+    margin: 0 0 18px 0;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.7;
+  }
+  .body-content strong { color: #1a1a1a; font-weight: 600; }
+  .body-content em { color: #555555; }
+  .body-content a { color: #333333; text-decoration: underline; }
+
+  /* ============================================
+     CTA
+     ============================================ */
+  .cta-wrapper { text-align: center; margin: 28px 0 8px 0; }
+  .cta-button {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 13px 30px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    mso-padding-alt: 0;
+  }
+
+  /* ============================================
+     FIRMA & FOOTER
+     ============================================ */
+  .signature {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1px solid #ebebeb;
+  }
+  .signature p { margin: 0 0 4px 0; }
+  .signature-name { font-weight: 600; font-size: 16px; color: #1a1a1a; }
+  .signature-role { font-size: 13px; color: #777777; }
+
+  .postdata {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background-color: #fafafa;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #555555;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  .postdata strong { color: #1a1a1a; font-style: normal; }
+
+  .footer {
+    text-align: center;
+    padding: 24px 36px 32px 36px;
+    font-size: 12px;
+    color: #999999;
+    line-height: 1.6;
+    border-top: 1px solid #ebebeb;
+  }
+  .footer a { color: #777777; text-decoration: underline; }
+
+  /* ============================================
+     RESPONSIVE
+     ============================================ */
+  @media only screen and (max-width: 600px) {
+    .email-wrapper { padding: 20px 8px !important; }
+    .header { padding: 32px 24px 28px 24px !important; }
+    .header-title { font-size: 24px !important; }
+    .header-subtitle { font-size: 15px !important; }
+    .body-content { padding: 28px 24px 4px 24px !important; }
+    .body-content p { font-size: 15px !important; }
+    .cta-button { padding: 12px 24px !important; font-size: 14px !important; }
+    .footer { padding: 20px 24px 28px 24px !important; }
+  }
+</style>
+</head>
+<body bgcolor="#f5f5f5">
+  <span class="preheader">No nacimos vendiendo IA. Nacimos hartos de ver a buenos equipos perder el tiempo.</span>
+
+  <div class="email-wrapper">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="email-container" align="center" width="600">
+      <tr>
+        <td>
+
+          <div class="header">
+            <p class="header-brand">Pau Solutions</p>
+            <h1 class="header-title">Cómo empezamos</h1>
+            <p class="header-subtitle">No nacimos vendiendo IA.</p>
+          </div>
+
+          <div class="body-content">
+            <p>Hola <strong>{{contact.first_name}}</strong>,</p>
+
+            <p>Quiero contarte de dónde sale Pau Solutions, porque dice mucho de cómo trabajamos.</p>
+
+            <p>No empezamos queriendo "vender inteligencia artificial". Empezamos construyendo automatizaciones para resolver problemas concretos: un proceso que se hacía a mano, un seguimiento que se escapaba, un reporte que costaba media tarde.</p>
+
+            <p>Y cada vez que entrábamos en una empresa, veíamos lo mismo: gente competente y con ganas, <strong>atrapada en tareas que una máquina podría hacer en segundos</strong>. Horas y horas al mes en copiar, pegar, reenviar, recordar. Talento desperdiciado en trabajo que no debería existir.</p>
+
+            <p>También vimos la otra cara: empresas que habían intentado modernizarse y se habían quemado. Habían pagado por herramientas que no usaban, por consultores que entregaban un informe y desaparecían, por promesas de "transformación digital" que se quedaban en una presentación bonita.</p>
+
+            <p>Ahí entendimos cuál era el hueco real. No era falta de tecnología, hay de sobra. Era falta de alguien que <em>entendiera el negocio primero</em> y que se quedara hasta que la solución funcionara de verdad.</p>
+
+            <p>Así que montamos justo eso: un equipo técnico que habla tu idioma, que recomienda solo lo que encaja, que construye de la auditoría a producción y que no desaparece después de la entrega.</p>
+
+            <p>Desde entonces hemos automatizado más de 40 procesos en 15 sectores distintos. Y la forma de empezar sigue siendo siempre la misma: una auditoría honesta para entender tu caso antes de proponer nada.</p>
+
+            <p>Si todavía no has reservado la tuya, este es el momento:</p>
+
+            <div class="cta-wrapper">
+              <!--[if mso]>
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://pausolutions.com/auditoria" style="height:44px;v-text-anchor:middle;width:220px;" arcsize="14%" stroke="f" fillcolor="#1a1a1a">
+                <w:anchorlock/>
+                <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:15px;font-weight:600;">Agendar mi Auditoría</center>
+              </v:roundrect>
+              <![endif]-->
+              <!--[if !mso]><!-- -->
+              <a href="https://pausolutions.com/auditoria" class="cta-button" style="text-decoration:none;">Agendar mi Auditoría</a>
+              <!--<![endif]-->
+            </div>
+
+            <div class="postdata">
+              <strong>P.D.</strong> Si te has quedado con alguna duda en estos correos, respóndeme directamente. Los leo yo.
+            </div>
+
+            <div class="signature">
+              <p class="signature-name">Pau Berenguer</p>
+              <p class="signature-role">Pau Solutions — IA &amp; Automatización</p>
+            </div>
+          </div>
+
+          <div class="footer">
+            Recibes este email porque solicitaste una auditoría gratuita en Pau Solutions.<br>
+            Si no quieres seguir recibiendo correos,
+            <a href="{{unsubscribe_url}}" style="color:#777777; mso-style-textfill-fill-color:#777777;"><!--[if mso]><font color="#777777"><![endif]-->date de baja aquí<!--[if mso]></font><![endif]--></a>.
+          </div>
+
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

@@ -2,11 +2,14 @@ export const site = {
   name: "Pau Solutions",
   // Entidad legal que aparece en las páginas de privacidad y términos.
   legalEntity: "TU ENTIDAD LEGAL S.L.",
-  domain: "tudominio.com",
-  email: "hola@tudominio.com",
+  domain: "pausolutions.com",
+  email: "pausolutions@gmail.com",
   tagline: "Inteligencia artificial, automatización y software a medida.",
   // Pega aquí la URL del webhook (p. ej. GoHighLevel) que recibe los formularios.
   webhookUrl: "PEGA_AQUI_TU_WEBHOOK_URL",
+  // Webhook de la automatización de nutrición (secuencia de emails). Se dispara
+  // en paralelo al enviar el formulario. Déjalo vacío ("") si no quieres usarlo.
+  nurtureWebhookUrl: "PEGA_AQUI_TU_WEBHOOK_DE_NUTRICION",
   whatsappNumber: "+340000000000",
   // Sustituye el número (sin "+") y el texto pre-rellenado del mensaje.
   whatsappUrl:
