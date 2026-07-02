@@ -1,9 +1,9 @@
 export const site = {
-  name: "Pau Solutions",
+  name: "TU MARCA",
   // Entidad legal que aparece en las páginas de privacidad y términos.
   legalEntity: "TU ENTIDAD LEGAL S.L.",
-  domain: "pausolutions.com",
-  email: "pausolutions@gmail.com",
+  domain: "tudominio.com",
+  email: "hola@tudominio.com",
   tagline: "Inteligencia artificial, automatización y software a medida.",
   // Pega aquí la URL del webhook (p. ej. GoHighLevel) que recibe los formularios.
   webhookUrl: "PEGA_AQUI_TU_WEBHOOK_URL",

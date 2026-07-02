@@ -12,7 +12,7 @@ Plantillas HTML para GoHighLevel (GHL) con nombres ordenados.
 - `6-enfoque.html` -> `Por qué trabajamos así (y no de otra forma)`
 - `7-limites.html` -> `Lo que NO vas a conseguir con nosotros`
 - `8-motivo.html` -> `No va solo de tecnología`
-- `9-origen.html` -> `Cómo empezó Pau Solutions`
+- `9-origen.html` -> `Cómo empezó TU MARCA`
 - `10-cierre.html` -> `Si no es el momento, no pasa nada`
 - `11-confirmacion.html` -> `Tu auditoría está confirmada`
 - `12-recordatorio.html` -> `Tu auditoría sigue pendiente de agendar`
