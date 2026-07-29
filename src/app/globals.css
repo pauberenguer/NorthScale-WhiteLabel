@@ -14,6 +14,9 @@
   --color-accent: #0071e3;
   --color-accent-hover: #0086fc;
   --color-warn: #ee4444;
+  /* Tono de foco para campos en error: mismo rojo, más oscuro, para que al
+     entrar en el campo se note sin perder la señal de error. */
+  --color-warn-strong: #c62828;
 
   --font-sans: var(--font-dm-sans), "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-dm-sans), "DM Sans", ui-sans-serif, system-ui, sans-serif;

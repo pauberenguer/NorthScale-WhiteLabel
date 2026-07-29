@@ -298,7 +298,7 @@ export function AuditForm({ className, darkMode }: { className?: string; darkMod
             ))}
           </div>
           {errors.areas?.message && (
-            <span className="mt-2 inline-block text-[12px] text-ink/70">{errors.areas.message}</span>
+            <span className="mt-2 inline-block text-[12px] text-warn">{errors.areas.message}</span>
           )}
         </div>
 
@@ -374,10 +374,10 @@ const Field = function Field({
       <input
         {...props}
         aria-invalid={error ? true : undefined}
-        className={cn(fieldBase, error && "border-ink", className)}
+        className={cn(fieldBase, error && "border-warn focus:border-warn-strong! focus-visible:border-warn-strong!", className)}
       />
       {error && (
-        <span className="mt-1.5 inline-block text-[12px] text-ink/70">{error}</span>
+        <span className="mt-1.5 inline-block text-[12px] text-warn">{error}</span>
       )}
     </label>
   );
@@ -403,12 +403,12 @@ const TextareaField = function TextareaField({
         className={cn(
           fieldBase,
           "h-auto py-3 leading-[1.55] resize-none",
-          error && "border-ink",
+          error && "border-warn focus:border-warn-strong! focus-visible:border-warn-strong!",
           className,
         )}
       />
       {error && (
-        <span className="mt-1.5 inline-block text-[12px] text-ink/70">{error}</span>
+        <span className="mt-1.5 inline-block text-[12px] text-warn">{error}</span>
       )}
     </label>
   );
@@ -453,7 +453,7 @@ function PhoneField({
         ref={ref}
         className={cn(
           "relative flex h-12 w-full items-stretch rounded-xl border border-line-strong bg-bg transition-colors focus-within:border-ink",
-          error && "border-ink",
+          error && "border-warn focus:border-warn-strong! focus-visible:border-warn-strong!",
         )}
       >
         <button
@@ -531,7 +531,7 @@ function PhoneField({
         </AnimatePresence>
       </div>
       {error && (
-        <span className="mt-1.5 inline-block text-[12px] text-ink/70">{error}</span>
+        <span className="mt-1.5 inline-block text-[12px] text-warn">{error}</span>
       )}
     </label>
   );
@@ -557,7 +557,7 @@ const SelectField = function SelectField({
         <select
           {...props}
           aria-invalid={error ? true : undefined}
-          className={cn(fieldBase, "appearance-none pr-10", error && "border-ink", className)}
+          className={cn(fieldBase, "appearance-none pr-10", error && "border-warn focus:border-warn-strong! focus-visible:border-warn-strong!", className)}
         >
           {options.map((o) => (
             <option key={o.value} value={o.value}>
@@ -578,7 +578,7 @@ const SelectField = function SelectField({
           </svg>
         </span>
       </div>
-      {error && <span className="mt-1.5 inline-block text-[12px] text-ink/70">{error}</span>}
+      {error && <span className="mt-1.5 inline-block text-[12px] text-warn">{error}</span>}
     </label>
   );
 };

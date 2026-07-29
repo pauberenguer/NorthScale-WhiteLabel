@@ -16,11 +16,13 @@ export const site = {
     "https://wa.me/340000000000?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n.",
 };
 
+// El orden sigue el de las secciones en la home: About → Cases → Services →
+// ProcessCarousel. Si reordenas la página, reordena también esto.
 export const nav = [
-  { label: "Servicios", href: "/#servicios" },
-  { label: "Casos", href: "/#casos" },
-  { label: "Proceso", href: "/#proceso" },
   { label: "Nosotros", href: "/#nosotros" },
+  { label: "Casos", href: "/#casos" },
+  { label: "Servicios", href: "/#servicios" },
+  { label: "Proceso", href: "/#proceso" },
 ];
 
 export const hero = {

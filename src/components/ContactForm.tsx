@@ -372,7 +372,7 @@ const Field = function Field({
         aria-invalid={error ? true : undefined}
         className={cn(
           fieldBase,
-          error && "border-warn focus:border-black",
+          error && "border-warn focus:border-warn-strong! focus-visible:border-warn-strong!",
           className,
         )}
       />
@@ -401,7 +401,7 @@ const TextareaField = function TextareaField({
         className={cn(
           fieldBase,
           "h-auto py-3 leading-[1.55] resize-none",
-          error && "border-warn focus:border-black",
+          error && "border-warn focus:border-warn-strong! focus-visible:border-warn-strong!",
           className,
         )}
       />
@@ -430,7 +430,7 @@ const SelectField = function SelectField({
         <select
           {...props}
           aria-invalid={error ? true : undefined}
-          className={cn(fieldBase, "appearance-none pr-10", error && "border-warn focus:border-black", className)}
+          className={cn(fieldBase, "appearance-none pr-10", error && "border-warn focus:border-warn-strong! focus-visible:border-warn-strong!", className)}
         >
           {options.map((o) => (
             <option key={o.value} value={o.value}>{o.label}</option>
