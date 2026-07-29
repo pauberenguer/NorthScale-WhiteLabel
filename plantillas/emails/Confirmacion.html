@@ -54,28 +54,39 @@
   }
 
   /* ============================================
+     LOGO BAR — cabecera de marca (fondo claro)
+     ============================================ */
+  .logo-bar {
+    background-color: #ffffff;
+    padding: 36px 36px 24px 36px;
+    text-align: center;
+    border-bottom: 1px solid #ebebeb;
+  }
+  .logo-bar img { display: block; margin: 0 auto 12px auto; width: 48px; height: 48px; }
+  .logo-bar-text {
+    color: #1a1a1a;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  /* ============================================
      HEADER
      ============================================ */
   .header {
     background-color: #ffffff;
-    padding: 40px 36px 32px 36px;
+    padding: 28px 36px 32px 36px;
     text-align: left;
     border-bottom: 1px solid #ebebeb;
   }
-  .header-brand {
-    color: #999999;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin: 0 0 20px 0;
-  }
   .header-title {
     color: #1a1a1a;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 700;
-    line-height: 1.25;
-    letter-spacing: -0.02em;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
     margin: 0;
   }
   .header-subtitle {
@@ -89,7 +100,7 @@
   /* ============================================
      BODY
      ============================================ */
-  .body-content { padding: 36px 36px 8px 36px; }
+  .body-content { padding: 36px 36px 24px 36px; }
   .body-content p {
     margin: 0 0 18px 0;
     font-size: 16px;
@@ -98,57 +109,6 @@
   }
   .body-content strong { color: #1a1a1a; font-weight: 600; }
   .body-content a { color: #333333; text-decoration: underline; }
-
-  /* ============================================
-     INFO CARD & LISTAS
-     ============================================ */
-  .info-card {
-    background-color: #fafafa;
-    border-left: 3px solid #1a1a1a;
-    padding: 20px 24px;
-    margin: 28px 0;
-    border-radius: 4px;
-  }
-  .info-card-title {
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: #999999;
-    margin: 0 0 14px 0;
-  }
-
-  .info-list { margin: 0; padding: 0; list-style: none; }
-  .info-list li {
-    font-size: 15px;
-    color: #333333;
-    padding: 8px 0 8px 26px;
-    position: relative;
-    line-height: 1.6;
-  }
-  .info-list li:before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: #1a1a1a;
-    font-weight: 600;
-  }
-
-  .checklist { margin: 0; padding: 0; list-style: none; }
-  .checklist li {
-    font-size: 15px;
-    color: #333333;
-    padding: 6px 0 6px 26px;
-    position: relative;
-    line-height: 1.6;
-  }
-  .checklist li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #1a1a1a;
-    font-weight: 700;
-  }
 
   /* ============================================
      CTA
@@ -177,17 +137,8 @@
   }
 
   /* ============================================
-     FIRMA & FOOTER
+     FOOTER
      ============================================ */
-  .signature {
-    margin-top: 36px;
-    padding-top: 24px;
-    border-top: 1px solid #ebebeb;
-  }
-  .signature p { margin: 0 0 4px 0; }
-  .signature-name { font-weight: 600; font-size: 16px; color: #1a1a1a; }
-  .signature-role { font-size: 13px; color: #777777; }
-
   .footer {
     text-align: center;
     padding: 24px 36px 32px 36px;
@@ -202,12 +153,13 @@
      ============================================ */
   @media only screen and (max-width: 600px) {
     .email-wrapper { padding: 20px 8px !important; }
-    .header { padding: 32px 24px 28px 24px !important; }
-    .header-title { font-size: 24px !important; }
+    .logo-bar { padding: 28px 24px 20px 24px !important; }
+    .logo-bar-text { font-size: 15px !important; }
+    .header { padding: 24px 24px 28px 24px !important; }
+    .header-title { font-size: 19px !important; }
     .header-subtitle { font-size: 15px !important; }
-    .body-content { padding: 28px 24px 4px 24px !important; }
+    .body-content { padding: 28px 24px 20px 24px !important; }
     .body-content p { font-size: 15px !important; }
-    .info-card { padding: 16px 20px !important; }
     .cta-button { padding: 12px 24px !important; font-size: 14px !important; }
     .footer { padding: 20px 24px 28px 24px !important; }
   }
@@ -221,8 +173,18 @@
       <tr>
         <td>
 
+          <!-- Cabecera de marca: símbolo + nombre.
+               El src DEBE ser una URL pública (https://). Una ruta local o un
+               adjunto no se ven en ningún cliente de correo. Súbelo a la media
+               library de GHL y pega aquí el enlace.
+               El fondo es claro, así que el símbolo tiene que ser oscuro.
+               Un filete la separa del titular. -->
+          <div class="logo-bar">
+            <img src="URL_DE_TU_LOGO" alt="" width="48" height="48" style="width:48px;height:48px;display:block;margin:0 auto 12px auto;">
+            <p class="logo-bar-text">TU MARCA</p>
+          </div>
+
           <div class="header">
-            <p class="header-brand">TU MARCA</p>
             <h1 class="header-title">Tu auditoría está confirmada</h1>
             <p class="header-subtitle">{{appointment.only_start_date}} — {{appointment.only_start_time}}</p>
           </div>
@@ -234,24 +196,21 @@
 
             <p>No es una llamada de ventas con guion. Es una sesión de trabajo donde vamos a hacer tres cosas muy concretas:</p>
 
-            <div class="info-card">
-              <p class="info-card-title">Qué haremos en la auditoría</p>
-              <ul class="info-list">
-                <li><strong>Entender tu operativa</strong> — qué procesos tienes, qué te frena y dónde se escapa el tiempo y el dinero.</li>
-                <li><strong>Detectar oportunidades reales</strong> — dónde la IA y la automatización aportan valor, y dónde no hace falta meterlas.</li>
-                <li><strong>Trazar un primer paso</strong> — salimos con un diagnóstico claro y una recomendación priorizada por impacto, lo trabajes con nosotros o no.</li>
-              </ul>
-            </div>
+            <p><strong>Entender tu operativa.</strong> Qué procesos tienes, qué te frena y dónde se escapa el tiempo y el dinero.</p>
+
+            <p><strong>Detectar oportunidades reales.</strong> Dónde la IA y la automatización aportan valor, y dónde no hace falta meterlas.</p>
+
+            <p><strong>Trazar un primer paso.</strong> Salimos con un diagnóstico claro y una recomendación priorizada por impacto, lo trabajes con nosotros o no.</p>
 
             <p>Sin humo, sin presión, sin presentaciones interminables. Vamos al grano.</p>
 
             <p><strong>Para que la sesión sea útil, prepara tres cosas:</strong></p>
 
-            <ul class="checklist">
-              <li>Conéctate 2 minutos antes con auriculares y buena conexión.</li>
-              <li>Ten a mano los procesos o tareas que más horas te comen ahora mismo.</li>
-              <li>Ven con una idea clara de qué te gustaría conseguir en los próximos meses.</li>
-            </ul>
+            <p><strong>La conexión.</strong> Conéctate 2 minutos antes, con auriculares y buena cobertura.</p>
+
+            <p><strong>Tus procesos.</strong> Ten a mano las tareas que más horas te comen ahora mismo.</p>
+
+            <p><strong>Tu objetivo.</strong> Ven con una idea clara de qué te gustaría conseguir en los próximos meses.</p>
 
             <div class="cta-wrapper">
               <!--[if mso]>
@@ -266,12 +225,7 @@
             </div>
 
             <div class="secondary-link">
-              <a href="https://wa.me/340000000000?text=Hola%2C%20necesito%20reagendar%20mi%20auditor%C3%ADa.">Necesito reagendar</a>
-            </div>
-
-            <div class="signature">
-              <p class="signature-name">Pau Berenguer</p>
-              <p class="signature-role">TU MARCA — IA &amp; Automatización</p>
+              <a href="https://wa.me/340000000000?text=Hola%2C%20necesito%20reagendar%20mi%20auditor%C3%ADa.">Necesito Reagendar</a>
             </div>
           </div>
 

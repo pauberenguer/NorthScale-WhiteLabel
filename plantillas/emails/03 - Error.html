@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="x-apple-disable-message-reformatting">
-<title>No es por la tecnología</title>
+<title>El error más común con la IA</title>
 <!--[if mso]>
 <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
 <style>
@@ -54,28 +54,39 @@
   }
 
   /* ============================================
+     LOGO BAR — cabecera de marca (fondo claro)
+     ============================================ */
+  .logo-bar {
+    background-color: #ffffff;
+    padding: 36px 36px 24px 36px;
+    text-align: center;
+    border-bottom: 1px solid #ebebeb;
+  }
+  .logo-bar img { display: block; margin: 0 auto 12px auto; width: 48px; height: 48px; }
+  .logo-bar-text {
+    color: #1a1a1a;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  /* ============================================
      HEADER
      ============================================ */
   .header {
     background-color: #ffffff;
-    padding: 40px 36px 32px 36px;
+    padding: 28px 36px 32px 36px;
     text-align: left;
     border-bottom: 1px solid #ebebeb;
   }
-  .header-brand {
-    color: #999999;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin: 0 0 20px 0;
-  }
   .header-title {
     color: #1a1a1a;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 700;
-    line-height: 1.25;
-    letter-spacing: -0.02em;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
     margin: 0;
   }
   .header-subtitle {
@@ -89,7 +100,7 @@
   /* ============================================
      BODY
      ============================================ */
-  .body-content { padding: 36px 36px 8px 36px; }
+  .body-content { padding: 36px 36px 24px 36px; }
   .body-content p {
     margin: 0 0 18px 0;
     font-size: 16px;
@@ -116,17 +127,8 @@
   }
 
   /* ============================================
-     FIRMA & FOOTER
+     FOOTER
      ============================================ */
-  .signature {
-    margin-top: 36px;
-    padding-top: 24px;
-    border-top: 1px solid #ebebeb;
-  }
-  .signature p { margin: 0 0 4px 0; }
-  .signature-name { font-weight: 600; font-size: 16px; color: #1a1a1a; }
-  .signature-role { font-size: 13px; color: #777777; }
-
   .footer {
     text-align: center;
     padding: 24px 36px 32px 36px;
@@ -135,17 +137,18 @@
     line-height: 1.6;
     border-top: 1px solid #ebebeb;
   }
-  .footer a { color: #777777; text-decoration: underline; }
 
   /* ============================================
      RESPONSIVE
      ============================================ */
   @media only screen and (max-width: 600px) {
     .email-wrapper { padding: 20px 8px !important; }
-    .header { padding: 32px 24px 28px 24px !important; }
-    .header-title { font-size: 24px !important; }
+    .logo-bar { padding: 28px 24px 20px 24px !important; }
+    .logo-bar-text { font-size: 15px !important; }
+    .header { padding: 24px 24px 28px 24px !important; }
+    .header-title { font-size: 19px !important; }
     .header-subtitle { font-size: 15px !important; }
-    .body-content { padding: 28px 24px 4px 24px !important; }
+    .body-content { padding: 28px 24px 20px 24px !important; }
     .body-content p { font-size: 15px !important; }
     .cta-button { padding: 12px 24px !important; font-size: 14px !important; }
     .footer { padding: 20px 24px 28px 24px !important; }
@@ -153,41 +156,47 @@
 </style>
 </head>
 <body bgcolor="#f5f5f5">
-  <span class="preheader">Automatizar no va de la tecnología. Va de devolverle a tu equipo el tiempo y la cabeza.</span>
+  <span class="preheader">Comprar la herramienta de moda antes de entender el problema. El error que más caro sale.</span>
 
   <div class="email-wrapper">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="email-container" align="center" width="600">
       <tr>
         <td>
 
+          <!-- Cabecera de marca: símbolo + nombre.
+               El src DEBE ser una URL pública (https://). Una ruta local o un
+               adjunto no se ven en ningún cliente de correo. Súbelo a la media
+               library de GHL y pega aquí el enlace.
+               El fondo es claro, así que el símbolo tiene que ser oscuro.
+               Un filete la separa del titular. -->
+          <div class="logo-bar">
+            <img src="URL_DE_TU_LOGO" alt="" width="48" height="48" style="width:48px;height:48px;display:block;margin:0 auto 12px auto;">
+            <p class="logo-bar-text">TU MARCA</p>
+          </div>
+
           <div class="header">
-            <p class="header-brand">TU MARCA</p>
-            <h1 class="header-title">No es por la tecnología</h1>
-            <p class="header-subtitle">Bueno, tampoco es solo por la tecnología.</p>
+            <h1 class="header-title">El error más común con la IA</h1>
+            <p class="header-subtitle">Y por qué probablemente lo estás a punto de cometer.</p>
           </div>
 
           <div class="body-content">
             <p>Hola <strong>{{contact.first_name}}</strong>,</p>
 
-            <p>Voy a ser honesto contigo.</p>
+            <p>Quiero contarte el error que vemos repetirse en casi todas las empresas que se acercan a la IA.</p>
 
-            <p>Cuando una empresa nos pide automatizar un proceso, casi nunca viene solo por "tener IA". Eso es la consecuencia, no el motivo de fondo.</p>
+            <p>Llega el directivo a una reunión, ha visto una demo impresionante de una herramienta, y dice: <em>"esto lo tenemos que meter sí o sí".</em> Se compra la licencia, se monta a medias, y a los tres meses nadie la usa.</p>
 
-            <p>El motivo real es otro.</p>
+            <p>¿El problema? Empezaron por la herramienta, no por el problema.</p>
 
-            <p>Es que el responsable de operaciones pueda dejar de apagar fuegos y por fin pensar en cómo hacer crecer el negocio. Es que el equipo comercial deje de perder leads porque nadie llega a hacer el seguimiento a tiempo.</p>
+            <p>Es como comprar una máquina carísima sin saber qué pieza vas a fabricar. La tecnología no es la respuesta. Es la consecuencia de haber entendido bien la pregunta.</p>
 
-            <p>Es que tu gente deje de pasar la tarde del viernes montando un reporte a mano que el lunes ya está desactualizado. Es recuperar esas horas y devolvérselas a las personas, para que hagan el trabajo que de verdad mueve la aguja.</p>
+            <p>Nosotros lo hacemos al revés, y por eso funciona. <strong>Primero entendemos el problema, después elegimos la herramienta.</strong> A veces la respuesta es un agente de IA. A veces es una automatización simple sin nada de IA. Y a veces, la respuesta más honesta es "esto no hace falta automatizarlo todavía".</p>
 
-            <p>Es quitarte de encima esa sensación de fondo de que <strong>el negocio depende de que ciertas personas no se pongan enfermas ni se vayan de vacaciones</strong>, porque el conocimiento y el proceso viven solo en su cabeza.</p>
+            <p>Esa diferencia es la que separa un proyecto que se queda en un cajón de uno que recupera horas reales cada semana desde el primer mes.</p>
 
-            <p>Y luego está la parte que casi nadie cuenta: la tranquilidad de saber que las cosas pasan aunque tú no estés mirando. Que el sistema trabaja por la noche, los findes, en agosto. Que lo que has construido es un activo, no una tarea más que vigilar.</p>
+            <p>El otro error, el gemelo de este, es el contrario: <strong>La parálisis</strong>. Tanto miedo a equivocarse o a gastar de más que pasan los meses y el trabajo manual se sigue acumulando. Y eso también cuesta dinero, solo que no se ve en una factura.</p>
 
-            <p>Eso, para mí, es lo que de verdad compra una empresa cuando automatiza bien. El dinero ahorrado es real, pero el tiempo y la cabeza que recuperas valen más.</p>
-
-            <p>Hay una cosa que he aprendido en todos estos proyectos: <strong>las empresas que dan el salto no son las que más saben de IA. Son las que se cansan lo suficiente del trabajo manual como para decidir que basta.</strong></p>
-
-            <p>Si estás leyendo esto, hay una posibilidad real de que estés cerca de ese punto.</p>
+            <p>La auditoría existe precisamente para esquivar los dos. Miramos tu caso concreto, separamos lo que aporta de lo que es ruido, y te decimos por dónde empezar de verdad. Sin venderte nada que no necesites.</p>
 
             <div class="cta-wrapper">
               <!--[if mso]>
@@ -200,17 +209,11 @@
               <a href="https://tudominio.com/auditoria" class="cta-button" style="text-decoration:none;">Agendar mi Auditoría</a>
               <!--<![endif]-->
             </div>
-
-            <div class="signature">
-              <p class="signature-name">Pau Berenguer</p>
-              <p class="signature-role">TU MARCA — IA &amp; Automatización</p>
-            </div>
           </div>
 
           <div class="footer">
             Recibes este email porque solicitaste una auditoría gratuita en TU MARCA.<br>
-            Si no quieres seguir recibiendo correos,
-            <a href="{{unsubscribe_url}}" style="color:#777777; mso-style-textfill-fill-color:#777777;"><!--[if mso]><font color="#777777"><![endif]-->date de baja aquí<!--[if mso]></font><![endif]--></a>.
+            Si no quieres seguir recibiendo correos, puedes darte de baja abajo.
           </div>
 
         </td>
