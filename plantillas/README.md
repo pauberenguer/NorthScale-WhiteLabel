@@ -4,7 +4,7 @@ Plantillas de email HTML listas para pegar en GoHighLevel.
 
 | Fichero / carpeta | Qué contiene                                                        |
 |-------------------|---------------------------------------------------------------------|
-| `emails/`         | Secuencia de nutrición: `01 - Bienvenida` → `10 - Cierre`, más `Confirmacion` y `Recordatorio` (por evento, sin número) |
+| `emails/`         | Secuencia de nutrición: `01 - Bienvenida` → `10 - Cierre`, más `Formulario Rellenado` y `Llamada Agendada` (por evento, sin número) |
 | `utils/`          | Transaccionales sueltas por evento (envío de contratos y documentos) |
 | `asuntos.md`      | **Asuntos y preheaders de todas las plantillas**, para copiar y pegar |
 

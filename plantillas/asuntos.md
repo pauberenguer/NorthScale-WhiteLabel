@@ -121,7 +121,18 @@ Preheader:
 Gracias por haber llegado hasta aquí. Si cambia el contexto, la puerta sigue abierta.
 ```
 
-### Confirmacion.html
+### Formulario Rellenado.html
+
+Asunto:
+```
+Solicitud recibida, solo falta que elijas hueco
+```
+Preheader:
+```
+Tu solicitud está registrada. Solo queda que elijas hueco para la auditoría.
+```
+
+### Llamada Agendada.html
 
 Asunto:
 ```
@@ -130,17 +141,6 @@ Tu auditoría está confirmada
 Preheader:
 ```
 Auditoría confirmada. Conéctate 2 minutos antes con auriculares y ven con tu caso en mente.
-```
-
-### Recordatorio.html
-
-Asunto:
-```
-Tu auditoría sigue reservada
-```
-Preheader:
-```
-30 minutos para ver qué puedes automatizar. Antes de que la semana te coma la agenda.
 ```
 
 ---

@@ -15,6 +15,7 @@ Las 12 comparten la misma cabecera de marca (símbolo + nombre), igual que
 |------------------|------------------------------------------------------------|
 | `URL_DE_TU_LOGO` | URL **pública** de tu símbolo (1 vez por fichero)          |
 | `TU MARCA`       | Nombre de tu marca (cabecera, firma y footer)              |
+| `TU NOMBRE`      | Quien firma los correos (1 vez por fichero)                |
 | `tudominio.com`  | Tu dominio en los enlaces de CTA                           |
 
 Sobre el logo, mismas reglas que en [`../utils/README.md`](../utils/README.md):
@@ -29,4 +30,6 @@ sed -i '' 's|URL_DE_TU_LOGO|https://tu-url-publica.png|g; s|TU MARCA|Tu Marca|g'
 ## Nota de uso en GHL
 
 - Secuencia principal recomendada: `1` a `10`.
-- Plantillas variables según evento: `Confirmacion` (cuando hay cita) y `Recordatorio` (si no se agenda o según tu lógica). Van sin número precisamente porque no ocupan un lugar fijo en la secuencia.
+- Plantillas por evento, sin número porque no ocupan lugar fijo en la secuencia:
+  - `Formulario Rellenado` — al enviar el formulario de auditoría.
+  - `Llamada Agendada` — cuando el contacto reserva hueco.

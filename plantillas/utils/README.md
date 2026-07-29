@@ -52,7 +52,8 @@ Busca y sustituye en `Contrato Enviado.html`:
 | Placeholder         | Por                                                     |
 |---------------------|---------------------------------------------------------|
 | `URL_DE_TU_LOGO`    | URL **pública** de tu símbolo (ver abajo)               |
-| `TU MARCA`          | Nombre de tu marca (1 vez, en la cabecera)              |
+| `TU MARCA`          | Nombre de tu marca (cabecera y firma)                   |
+| `TU NOMBRE`         | Quien firma los correos                                 |
 | `hola@tudominio.com`| Tu email de contacto (aparece 2 veces: href y texto)    |
 
 ## El logo de la cabecera
