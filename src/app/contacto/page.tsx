@@ -3,7 +3,6 @@ import { Reveal } from "@/components/Reveal";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contacto",
   description:
     "Cuéntanos sobre tu negocio y cómo podemos ayudarte con IA, automatización o software a medida.",
   alternates: { canonical: "/contacto" },
@@ -16,7 +15,7 @@ export default function ContactoPage() {
         <div className="mx-auto max-w-[720px]">
           <Reveal>
             <div className="text-center">
-              <p className="text-[11px] uppercase tracking-[0.18em] text-muted">
+              <p className="text-[14px] uppercase tracking-[0.18em] text-muted">
                 Contacto
               </p>
               <h1 className="mt-5 heading-display text-[clamp(36px,6vw,64px)] text-ink leading-[0.95]">

@@ -39,7 +39,7 @@ export function ProcessCarousel() {
             <div className="grid gap-8 md:grid-cols-12 md:items-end md:gap-12">
               <div className="md:col-span-7">
                 <Reveal>
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-bg/50">
+                  <p className="text-[14px] uppercase tracking-[0.18em] text-bg/50">
                     {process.eyebrow}
                   </p>
                 </Reveal>

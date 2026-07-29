@@ -142,7 +142,7 @@ export function AuditForm({ className, darkMode }: { className?: string; darkMod
       setStatus("success");
       reset();
       window.scrollTo({ top: 0, behavior: "smooth" });
-      window.open(site.whatsappUrl, "_blank", "noopener,noreferrer");
+      window.open(site.whatsappUrlAfterForm, "_blank", "noopener,noreferrer");
     } catch {
       setStatus("error");
     }
@@ -173,7 +173,7 @@ export function AuditForm({ className, darkMode }: { className?: string; darkMod
           Hemos recibido tu solicitud. Te hemos escrito por WhatsApp para que hablemos directamente y coordinemos tu consultoría.
         </p>
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-          <Button href={site.whatsappUrl} variant="primary" size="lg" newTab>
+          <Button href={site.whatsappUrlAfterForm} variant="primary" size="lg" newTab>
             Abrir WhatsApp
           </Button>
           <Button href="/" variant="outline" size="lg">
@@ -274,7 +274,7 @@ export function AuditForm({ className, darkMode }: { className?: string; darkMod
         <div>
           <span className={fieldLabel}>
             ¿Qué Quieres Mejorar con IA?
-            <span className="font-normal text-ink/40" aria-hidden="true"> *</span>
+            <span className="font-normal text-ink/70" aria-hidden="true"> *</span>
           </span>
           <div className="mt-3 grid gap-3 sm:grid-cols-2">
             {areaOptions.map((area) => (
@@ -285,6 +285,11 @@ export function AuditForm({ className, darkMode }: { className?: string; darkMod
                   dark
                     ? "border-white/10 text-white/80 hover:border-white/20 has-[:checked]:border-white/30 has-[:checked]:bg-white/[0.04]"
                     : "border-line-strong bg-bg text-ink/80 hover:border-ink/20 has-[:checked]:border-ink has-[:checked]:bg-ink/[0.02]",
+                  // Sin ninguna marcada no hay campo que teñir, así que el
+                  // error se señala en el borde de todas las opciones.
+                  // El hover se repite en rojo porque su variante pisa al
+                  // borde base y, si no, al pasar el ratón se perdía la señal.
+                  errors.areas && "border-warn hover:border-warn",
                 )}
               >
                 <input
@@ -315,10 +320,10 @@ export function AuditForm({ className, darkMode }: { className?: string; darkMod
           >
             {status === "loading" ? "Enviando…" : "Solicitar Auditoría"}
           </Button>
-          <p className="text-center text-[13px] leading-snug text-ink/45 sm:hidden">
+          <p className="text-center text-[14px] leading-snug text-ink/70 sm:hidden">
             Tus datos no se comparten ni se usan para spam.
           </p>
-          <p className="hidden text-right text-[13px] leading-snug text-ink/45 sm:block sm:flex-1 sm:text-center">
+          <p className="hidden text-right text-[14px] leading-snug text-ink/70 sm:block sm:flex-1 sm:text-center">
             ¿Prefieres hablar directamente?{" "}
             <a href={`mailto:${site.email}`} className="underline underline-offset-4 hover:text-ink">
               {site.email}
@@ -327,9 +332,9 @@ export function AuditForm({ className, darkMode }: { className?: string; darkMod
         </div>
 
         {status === "error" && (
-          <p className="rounded-xl bg-bg p-3 text-center text-[13px] text-ink/80 ring-1 ring-line">
+          <p className="text-[12px] text-warn" role="alert">
             No hemos podido enviar el formulario. Escríbenos a{" "}
-            <a className="underline" href={`mailto:${site.email}`}>
+            <a className="underline underline-offset-2" href={`mailto:${site.email}`}>
               {site.email}
             </a>
             .
@@ -343,15 +348,17 @@ export function AuditForm({ className, darkMode }: { className?: string; darkMod
 const fieldBase =
   "h-12 w-full rounded-xl border border-line-strong bg-bg px-4 text-[14px] text-ink placeholder:text-ink/35 transition-colors focus-visible:border-ink focus-visible:outline-none";
 
+// Antes: 10px en text-muted (#6b6b6b). En versalitas y con tracking amplio se
+// leía mal, así que sube a 12px y a text-ink pleno.
 const fieldLabel =
-  "mb-2 inline-block text-[10px] uppercase tracking-[0.18em] text-muted";
+  "mb-2 inline-block text-[12px] uppercase tracking-[0.18em] text-ink";
 
 function LabelRow({ label, requiredMark }: { label: string; requiredMark?: boolean }) {
   return (
     <span className={fieldLabel}>
       {label}
       {requiredMark ? (
-        <span className="font-normal text-ink/40" aria-hidden="true"> *</span>
+        <span className="font-normal text-ink/70" aria-hidden="true"> *</span>
       ) : null}
     </span>
   );

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { site } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Términos y Condiciones",
   description: `Términos y condiciones de uso de ${site.name}.`,
   alternates: { canonical: "/terminos" },
 };
@@ -12,7 +11,7 @@ export default function TerminosPage() {
     <section className="relative pt-32 pb-28 md:pt-40 md:pb-36">
       <div className="container-prose">
         <div className="mx-auto max-w-[720px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-muted">
+          <p className="text-[14px] uppercase tracking-[0.18em] text-muted">
             Legal
           </p>
           <h1 className="mt-5 heading-display text-[clamp(36px,6vw,64px)] text-ink leading-[0.95]">

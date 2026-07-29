@@ -12,17 +12,18 @@ export function Services() {
         <div className="grid gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">
             <Reveal>
-              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-bg/45">
+              <p className="text-[14px] uppercase tracking-[0.18em] text-bg/50">
                 {services.eyebrow}
               </p>
             </Reveal>
+            {/* Mismo patrón que ProcessCarousel: el título en blanco pleno y
+                el acento en cursiva atenuada, en vez de un solo RevealLines
+                con `last:` que teñía las dos líneas por igual. */}
             <h2 className="mt-6 heading-display text-[clamp(40px,6.5vw,88px)] leading-[0.98]">
-              <RevealLines
-                text={[services.title, services.titleAccent]}
-                lineClassName="last:italic last:text-bg/80"
-                stagger={0.08}
-                linePb="0.08em"
-              />
+              <RevealLines text={[services.title]} stagger={0.08} linePb="0.08em" />
+              <span className="block heading-display-italic text-bg/85">
+                <RevealLines text={[services.titleAccent]} stagger={0.08} linePb="0.08em" />
+              </span>
             </h2>
           </div>
           <div className="md:col-span-4 md:col-start-9">

@@ -10,7 +10,7 @@ export function Manifesto() {
         <div className="grid gap-10 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-5">
             <Reveal>
-              <p className="text-[11px] uppercase tracking-[0.18em] text-muted">
+              <p className="text-[14px] uppercase tracking-[0.18em] text-muted">
                 {manifesto.eyebrow}
               </p>
             </Reveal>

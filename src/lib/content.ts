@@ -12,8 +12,14 @@ export const site = {
   nurtureWebhookUrl: "PEGA_AQUI_TU_WEBHOOK_DE_NUTRICION",
   whatsappNumber: "+340000000000",
   // Sustituye el número (sin "+") y el texto pre-rellenado del mensaje.
+  // Genérico: botón flotante, modal de salida y CTA final.
   whatsappUrl:
     "https://wa.me/340000000000?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n.",
+  // Se abre solo al enviar la auditoría. Va aparte porque ahí el visitante
+  // acaba de darnos sus datos y pedir "más información" no tendría sentido.
+  // Texto: "Hola, acabo de rellenar el formulario de auditoría."
+  whatsappUrlAfterForm:
+    "https://wa.me/340000000000?text=Hola%2C%20acabo%20de%20rellenar%20el%20formulario%20de%20auditor%C3%ADa.",
 };
 
 // El orden sigue el de las secciones en la home: About → Cases → Services →

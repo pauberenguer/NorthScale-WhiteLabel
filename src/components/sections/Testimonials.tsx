@@ -13,7 +13,7 @@ export function Testimonials() {
     <section id="testimonios" className="relative pt-20 pb-10 md:pt-28 md:pb-14 overflow-hidden">
       <div className="container-wide text-center">
         <Reveal>
-          <p className="text-[11px] uppercase tracking-[0.18em] text-muted">
+          <p className="text-[14px] uppercase tracking-[0.18em] text-muted">
             {testimonials.eyebrow}
           </p>
         </Reveal>

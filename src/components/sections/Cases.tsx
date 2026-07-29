@@ -12,7 +12,7 @@ export function Cases() {
         <div className="grid gap-10 md:grid-cols-12 md:items-end md:gap-12">
           <div className="md:col-span-7">
             <Reveal>
-              <p className="text-[11px] uppercase tracking-[0.18em] text-muted">
+              <p className="text-[14px] uppercase tracking-[0.18em] text-muted">
                 {cases.eyebrow}
               </p>
             </Reveal>

@@ -4,7 +4,6 @@ import { AuditForm } from "@/components/AuditForm";
 import { auditoria, site } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Auditoría gratuita",
   description:
     "Solicita una auditoría gratuita de 30-45 minutos para detectar dónde la IA o la automatización pueden ahorrarte tiempo y mejorar tu operación.",
   alternates: { canonical: "/auditoria" },
@@ -18,7 +17,7 @@ export default function AuditoriaPage() {
           {/* Top-left: title + body */}
           <div className="order-1 md:col-span-5 md:sticky md:top-32">
             <Reveal>
-              <p className="text-[11px] uppercase tracking-[0.18em] text-muted">
+              <p className="text-[14px] uppercase tracking-[0.18em] text-muted">
                 {auditoria.eyebrow}
               </p>
             </Reveal>
@@ -53,29 +52,12 @@ export default function AuditoriaPage() {
             </Reveal>
           </div>
 
-          {/* Right: form */}
+          {/* Right: form. En móvil el formulario cierra la página: el resumen
+              de duración/coste/formato solo se muestra en la barra lateral de
+              escritorio, para no repetirlo debajo del propio formulario. */}
           <div className="order-2 md:col-span-7">
             <Reveal delay={0.3}>
               <AuditForm />
-            </Reveal>
-          </div>
-
-          {/* Info rows: below form on mobile, hidden on md+ (shown in sticky sidebar) */}
-          <div className="order-3 md:hidden">
-            <Reveal delay={0.55}>
-              <ul className="space-y-5 border-t border-line pt-8">
-                <Row label="Duración">30 — 45 min</Row>
-                <Row label="Coste">Sin Compromiso · Gratuito</Row>
-                <Row label="Formato">Llamada 1 a 1</Row>
-                <Row label="Contacto">
-                  <a
-                    href={`mailto:${site.email}`}
-                    className="underline underline-offset-4 decoration-line-strong hover:decoration-ink"
-                  >
-                    {site.email}
-                  </a>
-                </Row>
-              </ul>
             </Reveal>
           </div>
         </div>

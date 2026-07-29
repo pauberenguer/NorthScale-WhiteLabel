@@ -11,7 +11,7 @@ export function FinalCTA() {
         <div className="mx-auto max-w-[980px]">
           <div className="text-center">
             <Reveal>
-              <p className="text-[11px] uppercase tracking-[0.18em] text-muted">
+              <p className="text-[14px] uppercase tracking-[0.18em] text-muted">
                 {finalCTA.eyebrow}
               </p>
             </Reveal>

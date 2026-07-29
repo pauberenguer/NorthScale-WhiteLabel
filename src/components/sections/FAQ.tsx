@@ -11,7 +11,7 @@ export function FAQ() {
       <div className="container-prose">
         <div className="text-center">
           <Reveal>
-            <p className="text-[11px] uppercase tracking-[0.18em] text-muted">
+            <p className="text-[14px] uppercase tracking-[0.18em] text-muted">
               {faq.eyebrow}
             </p>
           </Reveal>

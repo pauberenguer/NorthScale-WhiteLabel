@@ -10,7 +10,7 @@ export function About() {
     <section id="nosotros" className="relative pt-20 pb-10 md:pt-28 md:pb-14">
       <div className="container-prose">
         <Reveal>
-          <p className="text-center text-[11px] uppercase tracking-[0.18em] text-muted">
+          <p className="text-center text-[14px] uppercase tracking-[0.18em] text-muted">
             {about.eyebrow}
           </p>
         </Reveal>

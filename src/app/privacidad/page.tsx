@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { site } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad",
   description: `Política de privacidad de ${site.name}. Información sobre el tratamiento de datos personales.`,
   alternates: { canonical: "/privacidad" },
 };
@@ -12,7 +11,7 @@ export default function PrivacidadPage() {
     <section className="relative pt-32 pb-28 md:pt-40 md:pb-36">
       <div className="container-prose">
         <div className="mx-auto max-w-[720px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-muted">
+          <p className="text-[14px] uppercase tracking-[0.18em] text-muted">
             Legal
           </p>
           <h1 className="mt-5 heading-display text-[clamp(36px,6vw,64px)] text-ink leading-[0.95]">
