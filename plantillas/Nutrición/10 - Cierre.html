@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="x-apple-disable-message-reformatting">
-<title>Cómo empezamos</title>
+<title>Si no es para ti, no pasa nada</title>
 <!--[if mso]>
 <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
 <style>
@@ -108,7 +108,6 @@
     line-height: 1.7;
   }
   .body-content strong { color: #1a1a1a; font-weight: 600; }
-  .body-content em { color: #555555; }
   .body-content a { color: #333333; text-decoration: underline; }
 
   /* ============================================
@@ -126,21 +125,6 @@
     font-weight: 600;
     mso-padding-alt: 0;
   }
-
-  /* ============================================
-     POSTDATA
-     ============================================ */
-  .postdata {
-    margin-top: 24px;
-    padding: 16px 20px;
-    background-color: #fafafa;
-    border-radius: 6px;
-    font-size: 14px;
-    color: #555555;
-    font-style: italic;
-    line-height: 1.6;
-  }
-  .postdata strong { color: #1a1a1a; font-style: normal; }
 
   /* ============================================
      FIRMA
@@ -184,7 +168,7 @@
 </style>
 </head>
 <body bgcolor="#f5f5f5">
-  <span class="preheader">No nacimos vendiendo IA. Nacimos hartos de ver a buenos equipos perder el tiempo.</span>
+  <span class="preheader">Gracias por haber llegado hasta aquí. Si cambia el contexto, la puerta sigue abierta.</span>
 
   <div class="email-wrapper">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="email-container" align="center" width="600">
@@ -198,57 +182,53 @@
                El fondo es claro, así que el símbolo tiene que ser oscuro.
                Un filete la separa del titular. -->
           <div class="logo-bar">
-            <img src="URL_DE_TU_LOGO" alt="" width="48" height="48" style="width:48px;height:48px;display:block;margin:0 auto 12px auto;">
-            <p class="logo-bar-text">TU MARCA</p>
+            <img src="{{custom_values.logo_marca}}" alt="" width="48" height="48" style="width:48px;height:48px;display:block;margin:0 auto 12px auto;">
+            <p class="logo-bar-text">{{custom_values.nombre_marca}}</p>
           </div>
 
           <div class="header">
-            <h1 class="header-title">Cómo empezamos</h1>
-            <p class="header-subtitle">No nacimos vendiendo IA.</p>
+            <h1 class="header-title">Si no es para ti, no pasa nada</h1>
+            <p class="header-subtitle">Pero antes de cerrar, te pido un favor.</p>
           </div>
 
           <div class="body-content">
             <p>Hola <strong>{{contact.first_name}}</strong>,</p>
 
-            <p>Quiero contarte de dónde sale TU MARCA, porque dice mucho de cómo trabajamos.</p>
+            <p>Te he escrito unos cuantos correos. No te voy a dar la vara más.</p>
 
-            <p>No empezamos queriendo "vender inteligencia artificial". Empezamos construyendo automatizaciones para resolver problemas concretos: Un proceso que se hacía a mano, un seguimiento que se escapaba, un reporte que costaba media tarde.</p>
+            <p>Si has llegado hasta aquí y todavía no has agendado tu auditoría, lo más probable es que <strong>no sea el momento</strong>, que ahora mismo tengáis otras prioridades, o que no te haya terminado de convencer la idea.</p>
 
-            <p>Y cada vez que entrábamos en una empresa, veíamos lo mismo: Gente competente y con ganas, <strong>atrapada en tareas que una máquina podría hacer en segundos</strong>. Horas y horas al mes en copiar, pegar, reenviar, recordar. Talento desperdiciado en trabajo que no debería existir.</p>
+            <p>Y está perfectamente bien. Esto no es para todas las empresas, y prefiero ser honesto a meterte presión por algo que no encaja hoy.</p>
 
-            <p>También vimos la otra cara: Empresas que habían intentado modernizarse y se habían quemado. Habían pagado por herramientas que no usaban, por consultores que entregaban un informe y desaparecían, por promesas de "transformación digital" que se quedaban en una presentación bonita.</p>
-
-            <p>Ahí entendimos cuál era el hueco real. No era falta de tecnología, hay de sobra. Era falta de alguien que <em>entendiera el negocio primero</em> y que se quedara hasta que la solución funcionara de verdad.</p>
-
-            <p>Así que montamos justo eso: Un equipo técnico que habla tu idioma, que recomienda solo lo que encaja, que construye de la auditoría a producción y que no desaparece después de la entrega.</p>
-
-            <p>Desde entonces hemos automatizado más de 40 procesos en 15 sectores distintos. Y la forma de empezar sigue siendo siempre la misma: Una auditoría honesta para entender tu caso antes de proponer nada.</p>
-
-            <p>Si todavía no has reservado la tuya, este es el momento:</p>
+            <p>Si en algún momento cambia el contexto —crece el volumen, se acumula el trabajo manual, entra alguien nuevo al equipo— la puerta sigue abierta. La auditoría está aquí cuando la necesites:</p>
 
             <div class="cta-wrapper">
               <!--[if mso]>
-              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://tudominio.com/auditoria" style="height:44px;v-text-anchor:middle;width:220px;" arcsize="14%" stroke="f" fillcolor="#1a1a1a">
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{custom_values.enlace}}" style="height:44px;v-text-anchor:middle;width:220px;" arcsize="14%" stroke="f" fillcolor="#1a1a1a">
                 <w:anchorlock/>
                 <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:15px;font-weight:600;">Agendar mi Auditoría</center>
               </v:roundrect>
               <![endif]-->
               <!--[if !mso]><!-- -->
-              <a href="https://tudominio.com/auditoria" class="cta-button" style="text-decoration:none;">Agendar mi Auditoría</a>
+              <a href="{{custom_values.enlace}}" class="cta-button" style="text-decoration:none;">Agendar mi Auditoría</a>
               <!--<![endif]-->
             </div>
 
-            <div class="postdata">
-              <strong>P.D.</strong> Si te has quedado con alguna duda en estos correos, respóndeme directamente. Los leo yo.
-            </div>
+            <p>Pero antes de cerrar este email, quiero pedirte un favor.</p>
+
+            <p><strong>Respóndeme a este correo con una sola línea contándome qué te ha frenado.</strong> Puede ser el momento, el presupuesto, dudas sobre si encaja en tu caso, o que ahora mismo no es prioridad. Lo leo yo personalmente.</p>
+
+            <p>Esa información nos sirve para mejorar cómo lo explicamos y, sobre todo, para entender mejor a empresas como la tuya.</p>
+
+            <p>Gracias por haber llegado hasta aquí.</p>
             <div class="signature">
-              <p class="signature-name">TU NOMBRE</p>
-              <p class="signature-role">Fundador — TU MARCA</p>
+              <p class="signature-name">{{custom_values.representante_empresa}}</p>
+              <p class="signature-role">{{custom_values.cargo_representante}} — {{custom_values.nombre_marca}}</p>
             </div>
           </div>
 
           <div class="footer">
-            Recibes este email porque solicitaste una auditoría gratuita en TU MARCA.<br>
+            Recibes este email porque solicitaste una auditoría gratuita en {{custom_values.nombre_marca}}.<br>
             Si no quieres seguir recibiendo correos, puedes darte de baja abajo.
           </div>
 

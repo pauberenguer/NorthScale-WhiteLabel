@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="x-apple-disable-message-reformatting">
-<title>Lo que dicen las empresas con las que trabajamos</title>
+<title>Tu próximo pago automático</title>
 <!--[if mso]>
 <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
 <style>
@@ -81,6 +81,8 @@
     text-align: left;
     border-bottom: 1px solid #ebebeb;
   }
+  /* 22px, no 28px: algunos titulares llevan merge fields dentro, así que con un
+     valor largo se irían a tres líneas y comerían toda la cabecera. */
   .header-title {
     color: #1a1a1a;
     font-size: 22px;
@@ -111,31 +113,40 @@
   .body-content a { color: #333333; text-decoration: underline; }
 
   /* ============================================
-     TESTIMONIOS
+     DOC BOX — caja principal del aviso
      ============================================ */
-  .testimonial {
+  .doc-box {
     background-color: #fafafa;
-    border-left: 3px solid #cccccc;
-    padding: 20px 24px;
-    margin: 18px 0;
-    border-radius: 4px;
-    font-style: italic;
-    color: #333333;
-    font-size: 15px;
-    line-height: 1.65;
+    padding: 32px 28px;
+    margin: 32px 0;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    text-align: center;
   }
-  .testimonial-author {
-    display: block;
-    margin-top: 12px;
-    font-style: normal;
-    color: #777777;
-    font-size: 13px;
+  .doc-box .doc-box-label {
+    color: #999999 !important;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 12px 0;
+  }
+  .doc-box .doc-box-title {
+    color: #1a1a1a !important;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.45;
+    margin: 0 0 8px 0;
+  }
+  .doc-box .doc-box-subtitle {
+    color: #777777 !important;
+    font-size: 14px;
+    margin: 0 0 22px 0;
   }
 
   /* ============================================
      CTA
      ============================================ */
-  .cta-wrapper { text-align: center; margin: 28px 0 8px 0; }
   .cta-button {
     display: inline-block;
     background-color: #1a1a1a;
@@ -147,6 +158,21 @@
     font-weight: 600;
     mso-padding-alt: 0;
   }
+
+  /* ============================================
+     FALLBACK LINK
+     ============================================ */
+  .fallback {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background-color: #fafafa;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .fallback a { color: #333333; text-decoration: underline; word-break: break-all; }
 
   /* ============================================
      FIRMA
@@ -171,6 +197,7 @@
     line-height: 1.6;
     border-top: 1px solid #ebebeb;
   }
+  .footer a { color: #777777; text-decoration: underline; }
 
   /* ============================================
      RESPONSIVE
@@ -184,14 +211,15 @@
     .header-subtitle { font-size: 15px !important; }
     .body-content { padding: 28px 24px 20px 24px !important; }
     .body-content p { font-size: 15px !important; }
-    .testimonial { padding: 16px 20px !important; }
+    .doc-box { padding: 26px 20px !important; }
+    .doc-box .doc-box-title { font-size: 16px !important; }
     .cta-button { padding: 12px 24px !important; font-size: 14px !important; }
     .footer { padding: 20px 24px 28px 24px !important; }
   }
 </style>
 </head>
 <body bgcolor="#f5f5f5">
-  <span class="preheader">Equipos reales que recuperaron horas cada semana. Esto es lo que dicen.</span>
+  <span class="preheader">Importe, fecha y tarjeta del próximo cargo. No tienes que hacer nada.</span>
 
   <div class="email-wrapper">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="email-container" align="center" width="600">
@@ -205,54 +233,39 @@
                El fondo es claro, así que el símbolo tiene que ser oscuro.
                Un filete la separa del titular. -->
           <div class="logo-bar">
-            <img src="URL_DE_TU_LOGO" alt="" width="48" height="48" style="width:48px;height:48px;display:block;margin:0 auto 12px auto;">
-            <p class="logo-bar-text">TU MARCA</p>
+            <img src="{{custom_values.logo_marca}}" alt="" width="48" height="48" style="width:48px;height:48px;display:block;margin:0 auto 12px auto;">
+            <p class="logo-bar-text">{{custom_values.nombre_marca}}</p>
           </div>
 
           <div class="header">
-            <h1 class="header-title">Lo que dicen las empresas con las que trabajamos</h1>
-            <p class="header-subtitle">Sin filtros de marketing. Equipos reales.</p>
+            <h1 class="header-title">Tu próximo pago automático</h1>
+            <p class="header-subtitle">Solo es un aviso. No tienes que hacer nada.</p>
           </div>
 
           <div class="body-content">
-            <p>Hola <strong>{{contact.first_name}}</strong>,</p>
+            <p>Hola <strong>{{receiverFirstName}}</strong>,</p>
 
-            <p>Te puedo contar yo lo bien que trabajamos, pero prefiero que lo escuches de quien ya ha pasado por el proceso.</p>
+            <p>El <strong>{{dueDate}}</strong> se procesará el pago automático de <strong>{{totalAmount}}</strong> correspondiente a la factura {{invoiceName}}.</p>
 
-            <div class="testimonial">"En dos semanas teníamos un agente atendiendo el 60% de las consultas de soporte. El equipo por fin puede centrarse en lo importante."<span class="testimonial-author">— Laura Méndez, COO en Klinik Health</span></div>
+            <p>El cargo se hará en tu tarjeta <strong>{{cardName}}</strong> terminada en <strong>{{cardLast4}}</strong>. Te avisamos antes para que no haya sorpresas.</p>
 
-            <div class="testimonial">"Nos propusieron automatizar solo lo que tenía sentido. Nada de vender humo. El ROI se vio desde el primer mes."<span class="testimonial-author">— Marc Esteve, CEO en PropTech Solutions</span></div>
-
-            <div class="testimonial">"El proceso fue muy claro: auditoría, propuesta y en producción en 3 semanas. Ahora gestionamos el doble de leads sin ampliar equipo."<span class="testimonial-author">— Ana Ruiz, Directora Comercial en Formacity</span></div>
-
-            <div class="testimonial">"Lo que más valoro es que siguen ahí después de la entrega. No es un proyecto que se cierra, es una relación de mejora continua."<span class="testimonial-author">— Javier Blanco, CTO en Logística Express</span></div>
-
-            <p>No son casos aislados: Más de <strong>40 procesos automatizados</strong> en producción real, en más de <strong>15 sectores</strong> distintos, con <strong>24h</strong> de tiempo medio de respuesta y <strong>100% soluciones a medida</strong>, nunca plantillas genéricas.</p>
-
-            <p>Esto no es una garantía de que tú vayas a conseguir exactamente lo mismo, porque cada negocio es distinto. Pero sí es la prueba de que el enfoque funciona en el mundo real, no en una presentación de ventas.</p>
-
-            <p>En tu auditoría veremos qué de todo esto aplica a tu caso concreto.</p>
-
-            <div class="cta-wrapper">
-              <!--[if mso]>
-              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://tudominio.com/auditoria" style="height:44px;v-text-anchor:middle;width:220px;" arcsize="14%" stroke="f" fillcolor="#1a1a1a">
-                <w:anchorlock/>
-                <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:15px;font-weight:600;">Agendar mi Auditoría</center>
-              </v:roundrect>
-              <![endif]-->
-              <!--[if !mso]><!-- -->
-              <a href="https://tudominio.com/auditoria" class="cta-button" style="text-decoration:none;">Agendar mi Auditoría</a>
-              <!--<![endif]-->
+            <div class="doc-box">
+              <p class="doc-box-label" style="color:#999999;">Cargo programado</p>
+              <p class="doc-box-title" style="color:#1a1a1a;">{{totalAmount}}</p>
+              <p class="doc-box-subtitle" style="color:#777777;margin:0;">{{dueDate}} · {{cardName}} terminada en {{cardLast4}}</p>
             </div>
+
+            <p style="margin-top:24px;">Si quieres cambiar la tarjeta o revisar el cargo, <strong>responde a este correo antes de esa fecha</strong> y lo gestionamos.</p>
             <div class="signature">
-              <p class="signature-name">TU NOMBRE</p>
-              <p class="signature-role">Fundador — TU MARCA</p>
+              <p class="signature-name">{{custom_values.representante_empresa}}</p>
+              <p class="signature-role">{{custom_values.cargo_representante}} — {{custom_values.nombre_marca}}</p>
             </div>
           </div>
 
           <div class="footer">
-            Recibes este email porque solicitaste una auditoría gratuita en TU MARCA.<br>
-            Si no quieres seguir recibiendo correos, puedes darte de baja abajo.
+            Recibes este email porque tienes un pago automático activo con {{custom_values.nombre_marca}}.<br>
+            Si no reconoces este cargo, escríbenos cuanto antes a
+            <a href="mailto:{{custom_values.email_marca}}" style="color:#777777; mso-style-textfill-fill-color:#777777;"><!--[if mso]><font color="#777777"><![endif]-->{{custom_values.email_marca}}<!--[if mso]></font><![endif]--></a>.
           </div>
 
         </td>

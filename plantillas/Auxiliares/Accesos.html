@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="x-apple-disable-message-reformatting">
-<title>Tienes un documento pendiente de firma</title>
+<title>Empezamos. Solo nos faltan tus accesos</title>
 <!--[if mso]>
 <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
 <style>
@@ -81,8 +81,8 @@
     text-align: left;
     border-bottom: 1px solid #ebebeb;
   }
-  /* 22px, no 28px: el titular lleva dos merge fields dentro, así que con un
-     nombre largo se iba a tres líneas y comía toda la cabecera. */
+  /* 22px, no 28px: algunos titulares llevan merge fields dentro, así que con un
+     valor largo se irían a tres líneas y comerían toda la cabecera. */
   .header-title {
     color: #1a1a1a;
     font-size: 22px;
@@ -102,8 +102,6 @@
   /* ============================================
      BODY
      ============================================ */
-  /* El 24px de abajo antes era 8px: lo compensaba el margen de la firma, que ya
-     no está. Sin él, el último párrafo se pegaba al borde del footer. */
   .body-content { padding: 36px 36px 24px 36px; }
   .body-content p {
     margin: 0 0 18px 0;
@@ -115,7 +113,7 @@
   .body-content a { color: #333333; text-decoration: underline; }
 
   /* ============================================
-     DOC BOX — caja principal del documento
+     DOC BOX — caja principal del aviso
      ============================================ */
   .doc-box {
     background-color: #fafafa;
@@ -221,7 +219,7 @@
 </style>
 </head>
 <body bgcolor="#f5f5f5">
-  <span class="preheader">Tienes un documento listo para revisar y firmar. Se abre desde el navegador, sin instalar nada.</span>
+  <span class="preheader">Un formulario corto para darnos acceso a tus herramientas. Se rellena en cinco minutos.</span>
 
   <div class="email-wrapper">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="email-container" align="center" width="600">
@@ -235,53 +233,55 @@
                El fondo es claro, así que el símbolo tiene que ser oscuro.
                Un filete la separa del titular. -->
           <div class="logo-bar">
-            <img src="URL_DE_TU_LOGO" alt="" width="48" height="48" style="width:48px;height:48px;display:block;margin:0 auto 12px auto;">
-            <p class="logo-bar-text">TU MARCA</p>
+            <img src="{{custom_values.logo_marca}}" alt="" width="48" height="48" style="width:48px;height:48px;display:block;margin:0 auto 12px auto;">
+            <p class="logo-bar-text">{{custom_values.nombre_marca}}</p>
           </div>
 
           <div class="header">
-            <h1 class="header-title">Documento para {{document.recipient.firstName}} {{document.recipient.lastName}}</h1>
-            <p class="header-subtitle">Listo para revisar y firmar online. Te lleva menos de 2 minutos.</p>
+            <h1 class="header-title">Empezamos a trabajar</h1>
+            <p class="header-subtitle">Solo nos falta que nos des acceso a tus herramientas.</p>
           </div>
 
           <div class="body-content">
-            <p>Hola <strong>{{document.recipient.firstName}}</strong>,</p>
+            <p>Hola <strong>{{contact.first_name}}</strong>,</p>
 
-            <p>Te enviamos el documento que habíamos acordado, con el alcance, los plazos y las condiciones tal y como los hablamos. Puedes revisarlo y firmarlo desde el navegador.</p>
+            <p>Te damos la bienvenida. Ya está todo cerrado y arrancamos, así que lo único que falta es <strong>poder entrar en las herramientas</strong> con las que vamos a trabajar.</p>
 
-            <p><strong>No hace falta imprimir, escanear ni instalar nada.</strong></p>
+            <p>Hemos preparado un formulario para que nos los pases todos de una vez, en lugar de irte pidiendo cosas sueltas por correo durante días.</p>
 
             <div class="doc-box">
-              <p class="doc-box-label" style="color:#999999;">Documento pendiente de firma</p>
-              <p class="doc-box-title" style="color:#1a1a1a;">{{document.name}}</p>
-              <p class="doc-box-subtitle" style="color:#777777;">Firma Digital · Válida Legalmente · Sin Descargas</p>
+              <p class="doc-box-label" style="color:#999999;">Formulario de accesos</p>
+              <p class="doc-box-title" style="color:#1a1a1a;">Accesos a tus herramientas</p>
+              <p class="doc-box-subtitle" style="color:#777777;">5 Minutos · Sin Registro · Una Sola Vez</p>
 
               <!--[if mso]>
-              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{document.url}}" style="height:44px;v-text-anchor:middle;width:230px;" arcsize="14%" stroke="f" fillcolor="#1a1a1a">
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{custom_values.enlace_formulario_accesos}}" style="height:44px;v-text-anchor:middle;width:240px;" arcsize="14%" stroke="f" fillcolor="#1a1a1a">
                 <w:anchorlock/>
-                <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:15px;font-weight:600;">Revisar Documento</center>
+                <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:15px;font-weight:600;">Enviar mis Accesos</center>
               </v:roundrect>
               <![endif]-->
               <!--[if !mso]><!-- -->
-              <a href="{{document.url}}" class="cta-button" style="text-decoration:none;">Revisar Documento</a>
+              <a href="{{custom_values.enlace_formulario_accesos}}" class="cta-button" style="text-decoration:none;">Enviar mis Accesos</a>
               <!--<![endif]-->
             </div>
 
             <div class="fallback">
-              ¿No ves el botón? <a href="{{document.url}}">Abre el documento desde aquí</a>.
+              ¿No ves el botón? <a href="{{custom_values.enlace_formulario_accesos}}">Abre el formulario desde aquí</a>.
             </div>
 
-            <p style="margin-top:24px;">Si algo no encaja, <strong>respóndenos antes de firmar</strong>. En cuanto lo firmes recibirás una copia en PDF y te escribimos con los siguientes pasos.</p>
+            <p style="margin-top:24px;"><strong>No nos mandes contraseñas respondiendo a este correo.</strong> Para eso está el formulario: un email se queda guardado para siempre en dos bandejas de entrada, y no es sitio para credenciales.</p>
+
+            <p>Si algún acceso no lo tienes a mano o depende de otra persona, mándanos el resto y nos lo dices. No hace falta que esperes a tenerlo todo para empezar.</p>
             <div class="signature">
-              <p class="signature-name">TU NOMBRE</p>
-              <p class="signature-role">Fundador — TU MARCA</p>
+              <p class="signature-name">{{custom_values.representante_empresa}}</p>
+              <p class="signature-role">{{custom_values.cargo_representante}} — {{custom_values.nombre_marca}}</p>
             </div>
           </div>
 
           <div class="footer">
-            Recibes este email porque te hemos enviado un documento para firmar.<br>
-            Si no esperabas este correo, ignóralo o escríbenos a
-            <a href="mailto:hola@tudominio.com" style="color:#777777; mso-style-textfill-fill-color:#777777;"><!--[if mso]><font color="#777777"><![endif]-->hola@tudominio.com<!--[if mso]></font><![endif]--></a>.
+            Recibes este email porque acabas de empezar a trabajar con {{custom_values.nombre_marca}}.<br>
+            Si no esperabas este correo, escríbenos a
+            <a href="mailto:{{custom_values.email_marca}}" style="color:#777777; mso-style-textfill-fill-color:#777777;"><!--[if mso]><font color="#777777"><![endif]-->{{custom_values.email_marca}}<!--[if mso]></font><![endif]--></a>.
           </div>
 
         </td>

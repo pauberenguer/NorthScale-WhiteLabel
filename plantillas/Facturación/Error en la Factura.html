@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="x-apple-disable-message-reformatting">
-<title>Solicitud recibida</title>
+<title>Tu pago no se ha completado</title>
 <!--[if mso]>
 <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
 <style>
@@ -81,6 +81,8 @@
     text-align: left;
     border-bottom: 1px solid #ebebeb;
   }
+  /* 22px, no 28px: algunos titulares llevan merge fields dentro, así que con un
+     valor largo se irían a tres líneas y comerían toda la cabecera. */
   .header-title {
     color: #1a1a1a;
     font-size: 22px;
@@ -111,9 +113,9 @@
   .body-content a { color: #333333; text-decoration: underline; }
 
   /* ============================================
-     CALL BOX
+     DOC BOX — caja principal del aviso
      ============================================ */
-  .call-box {
+  .doc-box {
     background-color: #fafafa;
     padding: 32px 28px;
     margin: 32px 0;
@@ -121,7 +123,7 @@
     border-radius: 8px;
     text-align: center;
   }
-  .call-box .call-box-label {
+  .doc-box .doc-box-label {
     color: #999999 !important;
     font-size: 11px;
     font-weight: 600;
@@ -129,14 +131,14 @@
     text-transform: uppercase;
     margin: 0 0 12px 0;
   }
-  .call-box .call-box-title {
+  .doc-box .doc-box-title {
     color: #1a1a1a !important;
     font-size: 18px;
     font-weight: 600;
     line-height: 1.45;
     margin: 0 0 8px 0;
   }
-  .call-box .call-box-subtitle {
+  .doc-box .doc-box-subtitle {
     color: #777777 !important;
     font-size: 14px;
     margin: 0 0 22px 0;
@@ -156,6 +158,21 @@
     font-weight: 600;
     mso-padding-alt: 0;
   }
+
+  /* ============================================
+     FALLBACK LINK
+     ============================================ */
+  .fallback {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background-color: #fafafa;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .fallback a { color: #333333; text-decoration: underline; word-break: break-all; }
 
   /* ============================================
      FIRMA
@@ -180,6 +197,7 @@
     line-height: 1.6;
     border-top: 1px solid #ebebeb;
   }
+  .footer a { color: #777777; text-decoration: underline; }
 
   /* ============================================
      RESPONSIVE
@@ -193,69 +211,75 @@
     .header-subtitle { font-size: 15px !important; }
     .body-content { padding: 28px 24px 20px 24px !important; }
     .body-content p { font-size: 15px !important; }
-    .call-box { padding: 26px 20px !important; }
-    .call-box .call-box-title { font-size: 16px !important; }
+    .doc-box { padding: 26px 20px !important; }
+    .doc-box .doc-box-title { font-size: 16px !important; }
     .cta-button { padding: 12px 24px !important; font-size: 14px !important; }
     .footer { padding: 20px 24px 28px 24px !important; }
   }
 </style>
 </head>
 <body bgcolor="#f5f5f5">
-  <span class="preheader">Tu solicitud está registrada. Solo queda que elijas hueco para la auditoría.</span>
+  <span class="preheader">No se ha realizado ningún cargo. Puedes reintentar el pago online en un minuto.</span>
 
   <div class="email-wrapper">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="email-container" align="center" width="600">
       <tr>
         <td>
 
-          <!-- Cabecera de marca: símbolo + nombre, separada del titular por un
-               filete. El src DEBE ser una URL pública (https://): una ruta local
-               o un adjunto no se ven en ningún cliente de correo.
-               El fondo es claro, así que el símbolo tiene que ser oscuro. -->
+          <!-- Cabecera de marca: símbolo + nombre.
+               El src DEBE ser una URL pública (https://). Una ruta local o un
+               adjunto no se ven en ningún cliente de correo. Súbelo a la media
+               library de GHL y pega aquí el enlace.
+               El fondo es claro, así que el símbolo tiene que ser oscuro.
+               Un filete la separa del titular. -->
           <div class="logo-bar">
-            <img src="URL_DE_TU_LOGO" alt="" width="48" height="48" style="width:48px;height:48px;display:block;margin:0 auto 12px auto;">
-            <p class="logo-bar-text">TU MARCA</p>
+            <img src="{{custom_values.logo_marca}}" alt="" width="48" height="48" style="width:48px;height:48px;display:block;margin:0 auto 12px auto;">
+            <p class="logo-bar-text">{{custom_values.nombre_marca}}</p>
           </div>
 
           <div class="header">
-            <h1 class="header-title">Solicitud recibida, {{contact.first_name}}</h1>
-            <p class="header-subtitle">Solo queda elegir hueco. 30-45 minutos.</p>
+            <h1 class="header-title">El pago no se ha completado</h1>
+            <p class="header-subtitle">No se ha realizado ningún cargo. Puedes intentarlo de nuevo cuando quieras.</p>
           </div>
 
           <div class="body-content">
-            <p>Hola <strong>{{contact.first_name}}</strong>,</p>
+            <p>Hola <strong>{{receiverFirstName}}</strong>,</p>
 
-            <p>Tu solicitud ha quedado registrada y nuestro equipo ya la tiene.</p>
+            <p>El intento de pago de la factura <strong>{{invoiceName}}</strong> realizado el {{currentTimestamp}} no se ha completado. <strong>No se ha cobrado nada.</strong></p>
 
-            <p><strong>Falta un paso: elegir el hueco.</strong> Hasta que no reserves, no hay nada bloqueado en el calendario.</p>
+            <p>Suele deberse a un dato mal tecleado, un límite de la tarjeta o un bloqueo puntual del banco. Lo normal es que al segundo intento funcione.</p>
 
-            <div class="call-box">
-              <p class="call-box-label" style="color:#999999;">Auditoría gratuita</p>
-              <p class="call-box-title" style="color:#1a1a1a;">Reserva tu Diagnóstico</p>
-              <p class="call-box-subtitle" style="color:#777777;">30-45 Minutos · Sin Compromiso</p>
+            <div class="doc-box">
+              <p class="doc-box-label" style="color:#999999;">Pago pendiente</p>
+              <p class="doc-box-title" style="color:#1a1a1a;">{{invoiceName}}</p>
+              <p class="doc-box-subtitle" style="color:#777777;">Intento del {{currentTimestamp}} · Sin cargo realizado</p>
 
               <!--[if mso]>
-              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://tudominio.com/auditoria" style="height:44px;v-text-anchor:middle;width:220px;" arcsize="14%" stroke="f" fillcolor="#1a1a1a">
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{invoiceURL}}" style="height:44px;v-text-anchor:middle;width:240px;" arcsize="14%" stroke="f" fillcolor="#1a1a1a">
                 <w:anchorlock/>
-                <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:15px;font-weight:600;">Agendar mi Auditoría</center>
+                <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:15px;font-weight:600;">Reintentar el Pago</center>
               </v:roundrect>
               <![endif]-->
               <!--[if !mso]><!-- -->
-              <a href="https://tudominio.com/auditoria" class="cta-button" style="text-decoration:none;">Agendar mi Auditoría</a>
+              <a href="{{invoiceURL}}" class="cta-button" style="text-decoration:none;">Reintentar el Pago</a>
               <!--<![endif]-->
             </div>
 
-            <p>Si prefieres que te escribamos nosotros, responde a este correo con dos líneas sobre tu caso y lo hacemos.</p>
+            <div class="fallback">
+              ¿No ves el botón? <a href="{{invoiceURL}}">Abre la factura desde aquí</a>.
+            </div>
 
+            <p style="margin-top:24px;">Si el problema se repite, <strong>responde a este correo</strong> y buscamos otra forma de pago.</p>
             <div class="signature">
-              <p class="signature-name">TU NOMBRE</p>
-              <p class="signature-role">Fundador — TU MARCA</p>
+              <p class="signature-name">{{custom_values.representante_empresa}}</p>
+              <p class="signature-role">{{custom_values.cargo_representante}} — {{custom_values.nombre_marca}}</p>
             </div>
           </div>
 
           <div class="footer">
-            Recibes este email porque solicitaste una auditoría gratuita en TU MARCA.<br>
-            Si no la solicitaste, puedes ignorar este mensaje o darte de baja abajo.
+            Recibes este email porque el pago de una factura de {{custom_values.nombre_marca}} no se ha completado.<br>
+            Si no reconoces este pago, escríbenos cuanto antes a
+            <a href="mailto:{{custom_values.email_marca}}" style="color:#777777; mso-style-textfill-fill-color:#777777;"><!--[if mso]><font color="#777777"><![endif]-->{{custom_values.email_marca}}<!--[if mso]></font><![endif]--></a>.
           </div>
 
         </td>

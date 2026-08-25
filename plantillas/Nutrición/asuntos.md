@@ -1,15 +1,15 @@
-# Asuntos y preheaders
+# Asuntos y preheaders — Nutrición
 
-Fuente única de los **asuntos** (subject) y **preheaders** (preview text) de todas
-las plantillas. GHL te pide los dos campos justo antes de enviar, así que aquí
+Los **asuntos** (subject) y **preheaders** (preview text) de las diez plantillas
+de esta carpeta. GHL te pide los dos campos justo antes de enviar, así que aquí
 están juntos y en bloques sueltos para copiar y pegar sin arrastrar formato.
 
 Coinciden con el `<title>` y el `<span class="preheader">` de cada HTML. Si
-cambias uno, cambia también el otro para que no se desincronicen.
+cambias uno, cambia también el otro para que no se desincronicen. Las reglas
+comunes (longitud, emojis, no repetir asunto y preheader) están en
+[`../README.md`](../README.md).
 
 ---
-
-## Secuencia de nutrición (`emails/`)
 
 ### 01 - Bienvenida.html
 
@@ -120,69 +120,3 @@ Preheader:
 ```
 Gracias por haber llegado hasta aquí. Si cambia el contexto, la puerta sigue abierta.
 ```
-
-### Formulario Rellenado.html
-
-Asunto:
-```
-Solicitud recibida, solo falta que elijas hueco
-```
-Preheader:
-```
-Tu solicitud está registrada. Solo queda que elijas hueco para la auditoría.
-```
-
-### Llamada Agendada.html
-
-Asunto:
-```
-Tu auditoría está confirmada
-```
-Preheader:
-```
-Auditoría confirmada. Conéctate 2 minutos antes con auriculares y ven con tu caso en mente.
-```
-
----
-
-## Transaccionales (`utils/`)
-
-### Contrato Enviado.html
-
-Asunto:
-```
-Tu contrato está listo para firmar
-```
-Preheader:
-```
-Tienes un documento listo para revisar y firmar. Se abre desde el navegador, sin instalar nada.
-```
-
-Variante con el nombre del destinatario (mejora la apertura, pero comprueba
-antes que el merge field resuelve; si va vacío queda un asunto cojo):
-```
-{{document.recipient.firstName}}, tu contrato está listo para firmar
-```
-
-### Contrato Firmado.html
-
-Asunto:
-```
-Documento firmado, aquí tienes tu copia
-```
-Preheader:
-```
-Tu firma ha quedado registrada. Aquí tienes tu copia en PDF, lista para descargar.
-```
-
----
-
-## Notas
-
-- **Longitud.** Gmail y Outlook cortan el asunto sobre los **45-50 caracteres en
-  móvil**. Los de arriba están todos por debajo salvo `5-testimonios`, que se ve
-  entero en escritorio pero se corta en móvil — la primera mitad ya se entiende.
-- **Sin emojis ni mayúsculas gritadas.** Es correo B2B y la plantilla es sobria;
-  un 🚀 en el asunto desentona con el diseño y dispara filtros de spam.
-- **No repitas asunto y preheader.** Si el cliente ve la misma frase dos veces
-  pierdes la segunda línea de venta, que es la que decide la apertura.

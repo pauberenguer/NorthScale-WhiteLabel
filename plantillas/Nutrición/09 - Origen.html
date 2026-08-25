@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="x-apple-disable-message-reformatting">
-<title>Hemos recibido tu solicitud de auditoría</title>
+<title>Cómo empezamos</title>
 <!--[if mso]>
 <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
 <style>
@@ -108,43 +108,13 @@
     line-height: 1.7;
   }
   .body-content strong { color: #1a1a1a; font-weight: 600; }
+  .body-content em { color: #555555; }
   .body-content a { color: #333333; text-decoration: underline; }
-
-  /* ============================================
-     CALL BOX
-     ============================================ */
-  .call-box {
-    background-color: #fafafa;
-    padding: 32px 28px;
-    margin: 32px 0;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
-    text-align: center;
-  }
-  .call-box .call-box-label {
-    color: #999999 !important;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin: 0 0 12px 0;
-  }
-  .call-box .call-box-title {
-    color: #1a1a1a !important;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.45;
-    margin: 0 0 8px 0;
-  }
-  .call-box .call-box-subtitle {
-    color: #777777 !important;
-    font-size: 14px;
-    margin: 0 0 22px 0;
-  }
 
   /* ============================================
      CTA
      ============================================ */
+  .cta-wrapper { text-align: center; margin: 28px 0 8px 0; }
   .cta-button {
     display: inline-block;
     background-color: #1a1a1a;
@@ -208,84 +178,78 @@
     .header-subtitle { font-size: 15px !important; }
     .body-content { padding: 28px 24px 20px 24px !important; }
     .body-content p { font-size: 15px !important; }
-    .call-box { padding: 26px 20px !important; }
-    .call-box .call-box-title { font-size: 16px !important; }
     .cta-button { padding: 12px 24px !important; font-size: 14px !important; }
     .footer { padding: 20px 24px 28px 24px !important; }
   }
 </style>
 </head>
 <body bgcolor="#f5f5f5">
-  <span class="preheader">Tu auditoría gratuita está reservada para ti. Solo falta que elijas el hueco que mejor te venga.</span>
+  <span class="preheader">No nacimos vendiendo IA. Nacimos hartos de ver a buenos equipos perder el tiempo.</span>
 
   <div class="email-wrapper">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="email-container" align="center" width="600">
       <tr>
         <td>
 
-          <!-- Cabecera de marca: símbolo + nombre, separada del titular por un
-               filete. El src DEBE ser una URL pública (https://): una ruta local
-               o un adjunto no se ven en ningún cliente de correo.
-               El fondo es claro, así que el símbolo tiene que ser oscuro. -->
+          <!-- Cabecera de marca: símbolo + nombre.
+               El src DEBE ser una URL pública (https://). Una ruta local o un
+               adjunto no se ven en ningún cliente de correo. Súbelo a la media
+               library de GHL y pega aquí el enlace.
+               El fondo es claro, así que el símbolo tiene que ser oscuro.
+               Un filete la separa del titular. -->
           <div class="logo-bar">
-            <img src="URL_DE_TU_LOGO" alt="" width="48" height="48" style="width:48px;height:48px;display:block;margin:0 auto 12px auto;">
-            <p class="logo-bar-text">TU MARCA</p>
+            <img src="{{custom_values.logo_marca}}" alt="" width="48" height="48" style="width:48px;height:48px;display:block;margin:0 auto 12px auto;">
+            <p class="logo-bar-text">{{custom_values.nombre_marca}}</p>
           </div>
 
           <div class="header">
-            <h1 class="header-title">Hemos recibido tu solicitud</h1>
-            <p class="header-subtitle">Ahora solo queda agendar tu auditoría. 30-45 minutos.</p>
+            <h1 class="header-title">Cómo empezamos</h1>
+            <p class="header-subtitle">No nacimos vendiendo IA.</p>
           </div>
 
           <div class="body-content">
             <p>Hola <strong>{{contact.first_name}}</strong>,</p>
 
-            <p>Gracias por dar el paso. Acabas de hacer algo que <strong>la mayoría de empresas posponen durante meses</strong>: parar un momento y mirar de verdad dónde se está escapando el tiempo y el dinero en tus procesos.</p>
+            <p>Quiero contarte de dónde sale {{custom_values.nombre_marca}}, porque dice mucho de cómo trabajamos.</p>
 
-            <p>Lo siguiente es una <strong>auditoría gratuita</strong> de 30-45 minutos. No es una llamada de ventas con un guion. Es una sesión de trabajo donde analizamos tu operativa y salimos con un diagnóstico claro, lo contrates con nosotros o no.</p>
+            <p>No empezamos queriendo "vender inteligencia artificial". Empezamos construyendo automatizaciones para resolver problemas concretos: Un proceso que se hacía a mano, un seguimiento que se escapaba, un reporte que costaba media tarde.</p>
 
-            <p><strong>Esto es lo que veremos:</strong></p>
+            <p>Y cada vez que entrábamos en una empresa, veíamos lo mismo: Gente competente y con ganas, <strong>atrapada en tareas que una máquina podría hacer en segundos</strong>. Horas y horas al mes en copiar, pegar, reenviar, recordar. Talento desperdiciado en trabajo que no debería existir.</p>
 
-            <p><strong>Dónde estás ahora.</strong> Mapeamos tus procesos actuales y detectamos los cuellos de botella reales.</p>
+            <p>También vimos la otra cara: Empresas que habían intentado modernizarse y se habían quemado. Habían pagado por herramientas que no usaban, por consultores que entregaban un informe y desaparecían, por promesas de "transformación digital" que se quedaban en una presentación bonita.</p>
 
-            <p><strong>Qué se puede automatizar ya.</strong> Identificamos dónde la IA y la automatización aportan valor de verdad, y dónde no hacen falta.</p>
+            <p>Ahí entendimos cuál era el hueco real. No era falta de tecnología, hay de sobra. Era falta de alguien que <em>entendiera el negocio primero</em> y que se quedara hasta que la solución funcionara de verdad.</p>
 
-            <p><strong>El impacto estimado.</strong> Qué horas y qué tareas podrías recuperar cada semana.</p>
+            <p>Así que montamos justo eso: Un equipo técnico que habla tu idioma, que recomienda solo lo que encaja, que construye de la auditoría a producción y que no desaparece después de la entrega.</p>
 
-            <p><strong>Por dónde empezar.</strong> Un primer paso priorizado por impacto y complejidad, sin humo.</p>
+            <p>Desde entonces hemos automatizado más de 40 procesos en 15 sectores distintos. Y la forma de empezar sigue siendo siempre la misma: Una auditoría honesta para entender tu caso antes de proponer nada.</p>
 
-            <div class="call-box">
-              <p class="call-box-label" style="color:#999999;">Auditoría gratuita</p>
-              <p class="call-box-title" style="color:#1a1a1a;">Reserva tu Diagnóstico</p>
-              <p class="call-box-subtitle" style="color:#777777;">30-45 Minutos · Sin Compromiso</p>
+            <p>Si todavía no has reservado la tuya, este es el momento:</p>
 
+            <div class="cta-wrapper">
               <!--[if mso]>
-              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://tudominio.com/auditoria" style="height:44px;v-text-anchor:middle;width:220px;" arcsize="14%" stroke="f" fillcolor="#1a1a1a">
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{custom_values.enlace}}" style="height:44px;v-text-anchor:middle;width:220px;" arcsize="14%" stroke="f" fillcolor="#1a1a1a">
                 <w:anchorlock/>
                 <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:15px;font-weight:600;">Agendar mi Auditoría</center>
               </v:roundrect>
               <![endif]-->
               <!--[if !mso]><!-- -->
-              <a href="https://tudominio.com/auditoria" class="cta-button" style="text-decoration:none;">Agendar mi Auditoría</a>
+              <a href="{{custom_values.enlace}}" class="cta-button" style="text-decoration:none;">Agendar mi Auditoría</a>
               <!--<![endif]-->
             </div>
 
-            <p>Te recomiendo que reserves el hueco <strong>ahora</strong>, mientras lo tienes en mente. Sabes igual que yo que el "ya lo miro luego" no suele llegar. Son 30 minutos que pueden ahorrarte semanas de trabajo manual.</p>
-
-            <p>Si prefieres, también puedes responder a este correo contándonos brevemente tu caso y te escribimos nosotros.</p>
-
             <div class="postdata">
-              <strong>P.D.</strong> En los próximos días te voy a mandar varios correos con ejemplos reales de procesos que automatizamos, los errores más comunes que vemos y cómo trabajamos por dentro. Échales un ojo: Algunos te van a sonar más de lo que esperas.
+              <strong>P.D.</strong> Si te has quedado con alguna duda en estos correos, respóndeme directamente. Los leo yo.
             </div>
             <div class="signature">
-              <p class="signature-name">TU NOMBRE</p>
-              <p class="signature-role">Fundador — TU MARCA</p>
+              <p class="signature-name">{{custom_values.representante_empresa}}</p>
+              <p class="signature-role">{{custom_values.cargo_representante}} — {{custom_values.nombre_marca}}</p>
             </div>
           </div>
 
           <div class="footer">
-            Recibes este email porque solicitaste una auditoría gratuita en TU MARCA.<br>
-            Si no la solicitaste, puedes ignorar este mensaje.
+            Recibes este email porque solicitaste una auditoría gratuita en {{custom_values.nombre_marca}}.<br>
+            Si no quieres seguir recibiendo correos, puedes darte de baja abajo.
           </div>
 
         </td>
