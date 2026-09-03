@@ -38,28 +38,35 @@ npm run lint    # lint
 
 ## Checklist de personalización
 
-Casi todo se cambia desde **un solo archivo**:
-[`src/lib/content.ts`](./src/lib/content.ts). Ahí vive el objeto `site` y toda
-la copy de la web.
+Todos tus datos se cambian desde **un solo archivo**:
+[`src/lib/brand.ts`](./src/lib/brand.ts). Rellénalo y la web entera —logo, hero,
+footer, formularios, avisos legales y metadatos de SEO— se actualiza sola.
 
-### 1. Datos de marca y contacto (`src/lib/content.ts` → objeto `site`)
+La copy (títulos, servicios, FAQ, testimonios) vive aparte, en
+[`src/lib/content.ts`](./src/lib/content.ts), y ya no contiene ningún dato de
+marca: puedes actualizar la plantilla sin que se pisen tus datos.
 
-| Campo            | Qué es                                              |
-|------------------|-----------------------------------------------------|
-| `name`           | Nombre de tu marca (aparece en logo, hero, footer)  |
-| `legalEntity`    | Razón social (páginas de privacidad y términos)     |
-| `domain`         | Tu dominio, sin `https://` (usado en SEO/metadata)  |
-| `email`          | Email de contacto                                   |
-| `webhookUrl`     | **Webhook que recibe los formularios** (ver abajo)  |
-| `whatsappNumber` | Tu número de WhatsApp                                |
-| `whatsappUrl`    | Enlace `wa.me` con mensaje pre-rellenado            |
+### 1. Tus datos (`src/lib/brand.ts`)
 
-### 2. Calendario y redes sociales (`src/lib/content.ts`)
+| Campo                  | Qué es                                              |
+|------------------------|-----------------------------------------------------|
+| `name`                 | Nombre de tu marca (logo, hero, footer)             |
+| `legalEntity`          | Razón social (páginas de privacidad y términos)     |
+| `domain`               | Tu dominio, sin `https://` (usado en SEO/metadata)  |
+| `email`                | Email de contacto                                   |
+| `tagline`              | Descriptor corto de lo que haces                    |
+| `webhookUrl`           | **Webhook que recibe los formularios** (ver abajo)  |
+| `nurtureWebhookUrl`    | Webhook de la secuencia de emails (`""` si no usas) |
+| `calendarUrl`          | URL pública de tu calendario de reservas            |
+| `whatsappNumber`       | Tu número de WhatsApp                               |
+| `whatsappUrl`          | Enlace `wa.me` con mensaje pre-rellenado            |
+| `whatsappUrlAfterForm` | El que se abre al enviar la auditoría               |
+| `social`               | LinkedIn, YouTube e Instagram del footer            |
 
-- `finalCTA.calendarUrl` → URL pública de tu calendario de reservas
-  (GoHighLevel, Calendly, etc.).
-- `footer.columns` → enlaces de **LinkedIn**, **YouTube** e **Instagram**
-  (cambia `TU_USUARIO` / `TU_CANAL`).
+### 2. Nada más
+
+No hay datos de marca repartidos por otros archivos. Si encuentras uno, es un
+error de la plantilla.
 
 ### 3. Conexión del formulario (webhook)
 
@@ -130,7 +137,8 @@ src/
     ui/Button.tsx            Botón con variantes
     sections/                Secciones de la home (Hero, About, Services, etc.)
   lib/
-    content.ts               Config (objeto site) + TODA la copy de la web
+    brand.ts                 TUS datos: marca, contacto, webhooks, redes
+    content.ts               TODA la copy de la web (sin datos de marca)
     fonts.ts                 Carga de fuentes vía next/font
     utils.ts                 Helper cn() (clsx + tailwind-merge)
 public/                      Logos, favicon, banner OG

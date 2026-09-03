@@ -1,26 +1,10 @@
-export const site = {
-  name: "TU MARCA",
-  // Entidad legal que aparece en las páginas de privacidad y términos.
-  legalEntity: "TU ENTIDAD LEGAL S.L.",
-  domain: "tudominio.com",
-  email: "hola@tudominio.com",
-  tagline: "Inteligencia artificial, automatización y software a medida.",
-  // Pega aquí la URL del webhook (p. ej. GoHighLevel) que recibe los formularios.
-  webhookUrl: "PEGA_AQUI_TU_WEBHOOK_URL",
-  // Webhook de la automatización de nutrición (secuencia de emails). Se dispara
-  // en paralelo al enviar el formulario. Déjalo vacío ("") si no quieres usarlo.
-  nurtureWebhookUrl: "PEGA_AQUI_TU_WEBHOOK_DE_NUTRICION",
-  whatsappNumber: "+340000000000",
-  // Sustituye el número (sin "+") y el texto pre-rellenado del mensaje.
-  // Genérico: botón flotante, modal de salida y CTA final.
-  whatsappUrl:
-    "https://wa.me/340000000000?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n.",
-  // Se abre solo al enviar la auditoría. Va aparte porque ahí el visitante
-  // acaba de darnos sus datos y pedir "más información" no tendría sentido.
-  // Texto: "Hola, acabo de rellenar el formulario de auditoría."
-  whatsappUrlAfterForm:
-    "https://wa.me/340000000000?text=Hola%2C%20acabo%20de%20rellenar%20el%20formulario%20de%20auditor%C3%ADa.",
-};
+import { brand } from "./brand";
+
+/**
+ * Los datos de marca viven en `brand.ts`. Se re-exportan como `site` para que
+ * los componentes sigan importando `{ site } from "@/lib/content"` sin cambios.
+ */
+export const site = brand;
 
 // El orden sigue el de las secciones en la home: About → Cases → Services →
 // ProcessCarousel. Si reordenas la página, reordena también esto.
@@ -399,8 +383,7 @@ export const finalCTA = {
   body:
     "Cada mes que esperas es un mes que tu equipo sigue perdiendo horas en tareas que la IA y la automatización pueden resolver.",
   cta: { label: "Solicitar Auditoría Gratuita", href: "/auditoria" },
-  // URL pública de tu calendario de reservas (p. ej. GoHighLevel, Calendly...).
-  calendarUrl: "PEGA_AQUI_TU_URL_DE_CALENDARIO",
+  calendarUrl: brand.calendarUrl,
 };
 
 export const auditoria = {
@@ -444,9 +427,9 @@ export const footer = {
       links: [
         { label: "WhatsApp", href: site.whatsappUrl },
         { label: site.email, href: `mailto:${site.email}` },
-        { label: "LinkedIn", href: "https://www.linkedin.com/in/TU_USUARIO/" },
-        { label: "YouTube", href: "https://www.youtube.com/@TU_CANAL" },
-        { label: "Instagram", href: "https://www.instagram.com/TU_USUARIO/" },
+        { label: "LinkedIn", href: brand.social.linkedin },
+        { label: "YouTube", href: brand.social.youtube },
+        { label: "Instagram", href: brand.social.instagram },
       ],
     },
   ],
