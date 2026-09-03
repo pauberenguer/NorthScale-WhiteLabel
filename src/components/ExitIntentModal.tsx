@@ -8,7 +8,7 @@ import { site } from "@/lib/content";
 
 const STORAGE_KEY = "ns_exit_shown";
 const MOBILE_DELAY_MS = 50_000;
-const SKIP_PATHS = ["/auditoria"];
+const SKIP_PATHS = site.exitIntentSkipPaths;
 
 export function ExitIntentModal() {
   const [open, setOpen] = useState(false);

@@ -35,6 +35,11 @@ export const brand = {
   whatsappUrlAfterForm:
     "https://wa.me/340000000000?text=Hola%2C%20acabo%20de%20rellenar%20el%20formulario%20de%20auditor%C3%ADa.",
 
+  // Rutas donde NO debe aparecer el modal de salida. Tiene sentido excluir
+  // las que ya piden datos, y cualquier página cuyo argumento sea justamente
+  // que no pides nada a cambio.
+  exitIntentSkipPaths: ["/auditoria"],
+
   // Aparecen en la columna "Contacto" del footer. Deja en "" las que no uses.
   social: {
     linkedin: "https://www.linkedin.com/in/TU_USUARIO/",

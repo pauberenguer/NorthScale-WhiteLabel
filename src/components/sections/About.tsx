@@ -95,11 +95,6 @@ function Stat({ value, label, delay }: { value: string; label: string; delay: nu
     if (!numericMatch) return;
     const [, sign, numStr, suffix] = numericMatch;
     const target = parseInt(numStr, 10);
-    // Sin esto, un stat con valor 0 nunca llega a pintarse.
-    if (target === 0) {
-      setDisplay(`${sign}0${suffix}`);
-      return;
-    }
     const startTime = performance.now();
     const duration = 1100;
     let raf = 0;
