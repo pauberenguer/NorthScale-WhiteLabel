@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="x-apple-disable-message-reformatting">
-<title>Empezamos. Solo nos faltan tus accesos</title>
+<title>Actualiza tu método de pago</title>
 <!--[if mso]>
 <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
 <style>
@@ -219,7 +219,7 @@
 </style>
 </head>
 <body bgcolor="#f5f5f5">
-  <span class="preheader">Un formulario corto para darnos acceso a tus herramientas. Se rellena en cinco minutos.</span>
+  <span class="preheader">Un enlace seguro para cambiar la tarjeta con la que te cobramos. Dos minutos.</span>
 
   <div class="email-wrapper">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="email-container" align="center" width="600">
@@ -238,40 +238,42 @@
           </div>
 
           <div class="header">
-            <h1 class="header-title">Empezamos a trabajar</h1>
-            <p class="header-subtitle">Solo nos falta que nos des acceso a tus herramientas.</p>
+            <h1 class="header-title">Actualiza tu método de pago</h1>
+            <p class="header-subtitle">Se cambia desde un enlace seguro, en un par de minutos.</p>
           </div>
 
           <div class="body-content">
             <p>Hola <strong>{{contact.first_name}}</strong>,</p>
 
-            <p>Te damos la bienvenida. Ya está todo cerrado y arrancamos, así que lo único que falta es <strong>poder entrar en las herramientas</strong> con las que vamos a trabajar.</p>
+            <p>Hay que <strong>actualizar el método de pago</strong> con el que te cobramos. Puede ser porque la tarjeta esté a punto de caducar, porque el banco la haya bloqueado o porque nos hayas pedido cambiarla: En los tres casos se resuelve igual, desde el enlace de abajo.</p>
 
-            <p>Hemos preparado un formulario para que nos los pases todos de una vez, en lugar de irte pidiendo cosas sueltas por correo durante días.</p>
+            <p>Los datos se introducen en la pasarela de pago, no en este correo. Nosotros no llegamos a ver el número completo de la tarjeta en ningún momento.</p>
 
             <div class="doc-box">
-              <p class="doc-box-label" style="color:#999999;">Formulario de accesos</p>
-              <p class="doc-box-title" style="color:#1a1a1a;">Accesos a tus herramientas</p>
-              <p class="doc-box-subtitle" style="color:#777777;">5 Minutos · Sin Registro · Una Sola Vez</p>
+              <p class="doc-box-label" style="color:#999999;">Datos de pago</p>
+              <p class="doc-box-title" style="color:#1a1a1a;">Actualizar método de pago</p>
+              <p class="doc-box-subtitle" style="color:#777777;">2 Minutos · Conexión Segura · Sin Registro</p>
 
               <!--[if mso]>
-              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{custom_values.formulario_accesos}}" style="height:44px;v-text-anchor:middle;width:240px;" arcsize="14%" stroke="f" fillcolor="#1a1a1a">
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{custom_values.metodo_pago}}" style="height:44px;v-text-anchor:middle;width:240px;" arcsize="14%" stroke="f" fillcolor="#1a1a1a">
                 <w:anchorlock/>
-                <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:15px;font-weight:600;">Enviar mis Accesos</center>
+                <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:15px;font-weight:600;">Actualizar mis Datos</center>
               </v:roundrect>
               <![endif]-->
               <!--[if !mso]><!-- -->
-              <a href="{{custom_values.formulario_accesos}}" class="cta-button" style="text-decoration:none;">Enviar mis Accesos</a>
+              <a href="{{custom_values.metodo_pago}}" class="cta-button" style="text-decoration:none;">Actualizar mis Datos</a>
               <!--<![endif]-->
             </div>
 
             <div class="fallback">
-              ¿No ves el botón? <a href="{{custom_values.formulario_accesos}}">Abre el formulario desde aquí</a>.
+              ¿No ves el botón? <a href="{{custom_values.metodo_pago}}">Abre el enlace desde aquí</a>.
             </div>
 
-            <p style="margin-top:24px;"><strong>No nos mandes contraseñas respondiendo a este correo.</strong> Para eso está el formulario: un email se queda guardado para siempre en dos bandejas de entrada, y no es sitio para credenciales.</p>
+            <p style="margin-top:24px;"><strong>No nos mandes los datos de la tarjeta respondiendo a este correo.</strong> Para eso está el enlace: Un email con un número de tarjeta dentro se queda guardado para siempre en dos bandejas de entrada.</p>
 
-            <p>Si algún acceso no lo tienes a mano o depende de otra persona, mándanos el resto y nos lo dices. No hace falta que esperes a tenerlo todo para empezar.</p>
+            <p>Cambiar el método de pago <strong>no altera el importe ni la fecha de cobro</strong>. Lo único que cambia es la cuenta desde la que sale el dinero.</p>
+
+            <p>Si de la facturación se encarga otra persona de tu equipo, reenvíale este correo: El enlace le sirve igual.</p>
             <div class="signature">
               <p class="signature-name">{{custom_values.representante_empresa}}</p>
               <p class="signature-role">{{custom_values.cargo_representante}} — {{custom_values.nombre_marca}}</p>
@@ -279,8 +281,8 @@
           </div>
 
           <div class="footer">
-            Recibes este email porque acabas de empezar a trabajar con {{custom_values.nombre_marca}}.<br>
-            Si no esperabas este correo, escríbenos a
+            Recibes este email porque tienes un pago recurrente activo con {{custom_values.nombre_marca}}.<br>
+            Si dudas de que este correo sea nuestro, no abras el enlace y escríbenos a
             <a href="mailto:{{custom_values.email_marca}}" style="color:#777777; mso-style-textfill-fill-color:#777777;"><!--[if mso]><font color="#777777"><![endif]-->{{custom_values.email_marca}}<!--[if mso]></font><![endif]--></a>.
           </div>
 

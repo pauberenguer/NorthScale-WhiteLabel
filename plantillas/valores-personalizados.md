@@ -2,7 +2,7 @@
 
 Las plantillas **ya no llevan placeholders para buscar y sustituir**. Todo lo que
 cambia de una marca a otra se resuelve con *valores personalizados* de GHL, así
-que quien importe el snapshot rellena estos ocho campos una sola vez y los 24
+que quien importe el snapshot rellena estos nueve campos una sola vez y los 26
 correos quedan listos, sin tocar una línea de HTML.
 
 Se configuran en **Configuración → Valores personalizados**.
@@ -18,20 +18,22 @@ Se configuran en **Configuración → Valores personalizados**.
 | Email Marca | `{{custom_values.email_marca}}` | Email de contacto |
 | Auditoría Estratégica | `{{custom_values.enlace}}` | Enlace del calendario de auditoría |
 | WhatsApp Marca | `{{custom_values.whatsapp_marca}}` | Enlace `https://wa.me/34XXXXXXXXX` |
-| Enlace Formulario Accesos | `{{custom_values.enlace_formulario_accesos}}` | Enlace al formulario de recogida de accesos |
+| Formulario Accesos | `{{custom_values.formulario_accesos}}` | Enlace al formulario de recogida de accesos |
+| Metodo Pago | `{{custom_values.metodo_pago}}` | Enlace donde el cliente actualiza su forma de pago |
 
 Dónde aparece cada uno:
 
 | Key | Dónde |
 |---|---|
-| `logo_marca` | Cabecera de las 24 |
-| `nombre_marca` | Cabecera, firma y footer de las 24 |
-| `representante_empresa` | Firma de las 24 |
-| `cargo_representante` | Firma de las 24 |
+| `logo_marca` | Cabecera de las 26 |
+| `nombre_marca` | Cabecera, firma y footer de las 26 |
+| `representante_empresa` | Firma de las 26 |
+| `cargo_representante` | Firma de las 26 |
 | `email_marca` | Footer de `Contratos`, `Facturación` y `Auxiliares` (en el `mailto:` y en el texto visible) |
 | `enlace` | Botón de `Nutrición` y de `Formulario Rellenado` |
 | `whatsapp_marca` | Enlace «Necesito Reagendar» de `Llamada Agendada` |
-| `enlace_formulario_accesos` | Botón de `Accesos` |
+| `formulario_accesos` | Botón de `Accesos` |
+| `metodo_pago` | Botón de `Método de Pago` y de `Segundo Aviso` |
 
 ## Dónde está probado
 
@@ -64,8 +66,9 @@ recreas un valor para «arreglarle» el key, rompes todo lo que lo usaba.
 
 **Escribe los nombres sin acentos ni barras.** GHL se los come al generar el
 key, que es como en esta cuenta *Teléfono Marca* acabó siendo `telfono` y
-*Dirección Empresa*, `direccin_empresa`. Los ocho de arriba están elegidos para
-que el key salga limpio.
+*Dirección Empresa*, `direccin_empresa`. Los nueve de arriba están elegidos para
+que el key salga limpio. Por eso *Metodo Pago* va escrito así, sin tilde y sin
+el «de»: *Método de Pago* daría `mtodo_de_pago`.
 
 **El de WhatsApp es un enlace completo, no un número.** `Teléfono Marca` guarda
 el número en formato de lectura (`+34 624 78 05 65`) y un `wa.me` necesita solo
@@ -77,7 +80,7 @@ prellenado, así que **el valor no debe llevar parámetros**.
 resuelve a cadena vacía lo que no reconoce (es lo que pasó con
 `{{document.link}}`, ver [`Contratos/README.md`](./Contratos/README.md)). Si te dejas
 `logo_marca`, no aparece un `{{...}}` en el correo: aparece un logo roto. Repasa
-que los ocho tengan valor antes de enviar nada.
+que los nueve tengan valor antes de enviar nada.
 
 ## El logo de la cabecera
 

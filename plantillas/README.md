@@ -1,6 +1,6 @@
 # plantillas
 
-Las 24 plantillas de email HTML, listas para pegar en GoHighLevel y ordenadas
+Las 26 plantillas de email HTML, listas para pegar en GoHighLevel y ordenadas
 por tipo. **Cada carpeta se corresponde con una carpeta de GHL y con la pantalla
 donde se configura ese tipo de plantilla**, así que lo que ves aquí es lo mismo
 que verás allí, y en el mismo orden alfabético.
@@ -8,7 +8,7 @@ que verás allí, y en el mismo orden alfabético.
 | Carpeta | Qué contiene | Dónde se configura en GHL |
 |---|---|---|
 | `Agenda/` | `Formulario Rellenado` y `Llamada Agendada` | Automatización → Workflows |
-| `Auxiliares/` | Las que no encajan en ningún bloque: `Accesos`, `Propuesta` y `Tarea Pendiente` | Automatización → Workflows |
+| `Auxiliares/` | Las que no encajan en ningún bloque: `Accesos`, `Método de Pago`, `Propuesta`, `Segundo Aviso` y `Tarea Pendiente` | Automatización → Workflows |
 | `Contratos/` | `Contrato Enviado` y `Contrato Firmado` | Pagos → Documents & Contracts → Settings |
 | `Facturación/` | Las 7 de facturas, estimaciones y pagos automáticos | Pagos → Invoices & Estimates → Settings |
 | `Nutrición/` | Los 10 correos de la secuencia, de `01 - Bienvenida` a `10 - Cierre` | Automatización → Workflows |
@@ -22,7 +22,7 @@ Y en la raíz, lo común a todas:
 
 | Fichero | Qué contiene |
 |---|---|
-| `valores-personalizados.md` | **Los 8 valores personalizados de GHL** que hay que configurar para que queden white label |
+| `valores-personalizados.md` | **Los 9 valores personalizados de GHL** que hay que configurar para que queden white label |
 | `assets/` | `sparkle-white.png`, por si prefieres la cabecera oscura |
 
 ## Cómo se cargan
@@ -47,7 +47,7 @@ no toca el HTML. Cómo configurarlos, en
 
 ## Notas de maquetación
 
-Las 24 comparten el mismo sistema: tablas HTML compatibles con Outlook, paleta
+Las 26 comparten el mismo sistema: tablas HTML compatibles con Outlook, paleta
 blanco/negro/gris, ancho de 600px, cabecera de marca (símbolo + nombre), botón
 con fallback VML para Outlook y media query para móvil.
 
@@ -62,7 +62,7 @@ Dónde se escriben cambia según el tipo: en Agenda, Auxiliares y Nutrición, al
 montar el correo en el workflow; en Contratos y Facturación, una sola vez en la
 pantalla de Settings, junto al desplegable de cada plantilla.
 
-Reglas comunes a los 24, para cuando escribas los tuyos:
+Reglas comunes a los 26, para cuando escribas los tuyos:
 
 - **Longitud.** Gmail y Outlook cortan el asunto sobre los **45-50 caracteres en
   móvil**. Los actuales están todos por debajo salvo `05 - Testimonios`, que se

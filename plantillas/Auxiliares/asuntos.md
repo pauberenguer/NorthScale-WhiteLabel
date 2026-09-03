@@ -39,6 +39,40 @@ Preheader:
 Un formulario corto para darnos acceso a tus herramientas. Se rellena en cinco minutos.
 ```
 
+### Método de Pago.html
+
+Asunto:
+```
+Actualiza tu método de pago
+```
+Preheader:
+```
+Un enlace seguro para cambiar la tarjeta con la que te cobramos. Dos minutos.
+```
+
+Variante con el nombre delante (aquí el merge field es seguro, es el mismo que
+usa el saludo del correo):
+```
+{{contact.first_name}}, actualiza tu método de pago
+```
+
+### Segundo Aviso.html
+
+Asunto:
+```
+Recordatorio: actualiza tu método de pago
+```
+Preheader:
+```
+Sigue pendiente el cambio de tarjeta. Si ya lo has hecho, ignora este correo.
+```
+
+Variante en pregunta, que suele abrirse mejor en un segundo toque porque no
+repite el asunto del primer correo:
+```
+¿Has podido actualizar el método de pago?
+```
+
 ### Propuesta.html
 
 Asunto:
