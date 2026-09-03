@@ -3,6 +3,7 @@ import { Reveal } from "@/components/Reveal";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
+  title: "Contacto",
   description:
     "Cuéntanos sobre tu negocio y cómo podemos ayudarte con IA, automatización o software a medida.",
   alternates: { canonical: "/contacto" },

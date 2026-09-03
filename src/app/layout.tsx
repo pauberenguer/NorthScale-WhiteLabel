@@ -10,9 +10,12 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${site.domain}`),
-  // Título único para todas las páginas. Sin `template`, para que ninguna
-  // pueda añadirle un sufijo.
-  title: `${site.name} – Agencia de IA`,
+  // `default` lo usa la home; `template` deja que cada página aporte el suyo
+  // ("Contacto · TU MARCA"). Una página sin `title` cae en el `default`.
+  title: {
+    default: `${site.name} — ${site.tagline.replace(/\.$/, "")}`,
+    template: `%s · ${site.name}`,
+  },
   description:
     "Consultora especializada en IA, automatización y desarrollo de software a medida para empresas. Diseñamos e implementamos sistemas reales que ahorran tiempo, mejoran procesos y escalan tu negocio.",
   applicationName: site.name,

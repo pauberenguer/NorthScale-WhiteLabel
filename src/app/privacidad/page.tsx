@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/lib/content";
 
 export const metadata: Metadata = {
+  title: "Política de Privacidad",
   description: `Política de privacidad de ${site.name}. Información sobre el tratamiento de datos personales.`,
   alternates: { canonical: "/privacidad" },
 };
