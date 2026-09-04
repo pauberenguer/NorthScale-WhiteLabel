@@ -6,14 +6,8 @@ import { brand } from "./brand";
  */
 export const site = brand;
 
-// El orden sigue el de las secciones en la home: About → Cases → Services →
-// ProcessCarousel. Si reordenas la página, reordena también esto.
-export const nav = [
-  { label: "Nosotros", href: "/#nosotros" },
-  { label: "Casos", href: "/#casos" },
-  { label: "Servicios", href: "/#servicios" },
-  { label: "Proceso", href: "/#proceso" },
-];
+export const nav = brand.nav;
+
 
 export const hero = {
   headline: "Potencia tu Negocio con Inteligencia Artificial.",

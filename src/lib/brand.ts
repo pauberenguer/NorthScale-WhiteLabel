@@ -35,6 +35,15 @@ export const brand = {
   whatsappUrlAfterForm:
     "https://wa.me/340000000000?text=Hola%2C%20acabo%20de%20rellenar%20el%20formulario%20de%20auditor%C3%ADa.",
 
+  // El menú de la cabecera. El orden es el que ve el visitante; si añades
+  // páginas propias, se añaden aquí.
+  nav: [
+    { label: "Nosotros", href: "/#nosotros" },
+    { label: "Casos", href: "/#casos" },
+    { label: "Servicios", href: "/#servicios" },
+    { label: "Proceso", href: "/#proceso" },
+  ],
+
   // Rutas donde NO debe aparecer el modal de salida. Tiene sentido excluir
   // las que ya piden datos, y cualquier página cuyo argumento sea justamente
   // que no pides nada a cambio.
