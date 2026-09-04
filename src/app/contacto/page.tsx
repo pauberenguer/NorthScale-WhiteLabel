@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { Reveal } from "@/components/Reveal";
 import { ContactForm } from "@/components/ContactForm";
 
@@ -7,6 +8,12 @@ export const metadata: Metadata = {
   description:
     "Cuéntanos sobre tu negocio y cómo podemos ayudarte con IA, automatización o software a medida.",
   alternates: { canonical: "/contacto" },
+  ...pageMeta({
+    path: "/contacto",
+    title: "Contacto",
+    description:
+      "Cuéntanos sobre tu negocio y cómo podemos ayudarte con IA, automatización o software a medida.",
+  }),
 };
 
 export default function ContactoPage() {

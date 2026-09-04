@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { dmSans } from "@/lib/fonts";
 import { site } from "@/lib/content";
+import { pageMeta } from "@/lib/seo";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -30,23 +31,15 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: site.name }],
   creator: site.name,
-  openGraph: {
-    type: "website",
-    locale: "es_ES",
-    url: `https://${site.domain}`,
+  // El de la home. Cada página declara el suyo con `openGraph()`: si no lo
+  // hiciera, heredaría este y diría que su dirección es la home, que es lo
+  // que hace que las redes sociales manden ahí al visitante.
+  ...pageMeta({
+    path: "/",
     title: `${site.name} — IA, automatización y software a medida`,
     description:
       "Diseñamos e implementamos agentes de IA, automatizaciones y software a medida para empresas que quieren escalar mejor.",
-    siteName: site.name,
-    images: [{ url: "/banner.png", width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${site.name} — IA, automatización y software a medida`,
-    description:
-      "Sistemas de IA y automatización a medida para empresas serias.",
-    images: ["/banner.png"],
-  },
+  }),
   robots: {
     index: true,
     follow: true,

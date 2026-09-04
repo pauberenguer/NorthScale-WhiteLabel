@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Política de Privacidad",
   description: `Política de privacidad de ${site.name}. Información sobre el tratamiento de datos personales.`,
   alternates: { canonical: "/privacidad" },
+  ...pageMeta({
+    path: "/privacidad",
+    title: "Política de Privacidad",
+    description:
+      "Información sobre el tratamiento de datos personales.",
+  }),
 };
 
 export default function PrivacidadPage() {

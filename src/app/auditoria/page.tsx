@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { Reveal, RevealLines } from "@/components/Reveal";
 import { AuditForm } from "@/components/AuditForm";
 import { auditoria, site } from "@/lib/content";
@@ -8,6 +9,12 @@ export const metadata: Metadata = {
   description:
     "Solicita una auditoría gratuita de 30-45 minutos para detectar dónde la IA o la automatización pueden ahorrarte tiempo y mejorar tu operación.",
   alternates: { canonical: "/auditoria" },
+  ...pageMeta({
+    path: "/auditoria",
+    title: "Auditoría gratuita",
+    description:
+      "Reserva una auditoría gratuita de 30-45 minutos: repasamos tus procesos y te decimos qué se puede automatizar y qué no.",
+  }),
 };
 
 export default function AuditoriaPage() {
